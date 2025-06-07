@@ -1,42 +1,279 @@
-
+/* 全局設定 */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9fbfd;
-  color: #333;
+    font-family: 'Montserrat', 'Roboto', 'Lato', sans-serif; /* 選擇現代感無襯線字體 */
+    background-color: #0A0F1A; /* 深藍或接近黑的背景，營造深邃科技感 */
+    color: #E0E6F0; /* 淺色文字，高對比度 */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 防止橫向滾動 */
+    -webkit-font-smoothing: antialiased; /* 字體抗鋸齒 */
+    -moz-osx-font-smoothing: grayscale; /* 字體抗鋸齒 */
 }
+
+/* 標題樣式 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* 標題可使用較粗的字體 */
+    color: #00F0FF; /* 醒目的科技藍色 */
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.5); /* 輕微光暈效果 */
+    font-weight: 700; /* 加粗 */
+}
+
+h1 { font-size: 3.8rem; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 1.8rem; }
+
+/* Header 導航列 */
 .header {
-  background: #012b50;
-  color: white;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: rgba(17, 24, 39, 0.8); /* 半透明背景，帶有朦朧感 */
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px); /* 模糊效果，增加科技層次感 */
+    -webkit-backdrop-filter: blur(5px); /* Safari 兼容 */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2); /* 底部科技線 */
 }
+
 .logo-area {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00F0FF; /* 與標題色一致 */
+    text-transform: uppercase;
 }
+
 .logo {
-  height: 50px;
-  margin-right: 15px;
+    height: 40px; /* 調整 logo 大小 */
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.6)); /* logo 發光效果 */
 }
+
 nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 600;
+    color: #A0AEC0; /* 導航連結顏色 */
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+
+nav a:hover {
+    color: #00F0FF; /* 懸停發光效果 */
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+}
+
+/* Hero 區塊 */
 .hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: #0a1f44;
-  color: white;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0A0F1A, #1A202C); /* 漸變背景 */
+    position: relative;
+    overflow: hidden; /* 防止背景動畫溢出 */
+    padding: 5rem 5% 3rem;
 }
+
+/* 可以在這裡加入 JS 粒子背景或 CSS 抽象背景圖形 */
+/* .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,...');
+    opacity: 0.15;
+    z-index: 1;
+} */
+
+.hero h1 {
+    font-size: 3.8rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+    position: relative; /* 確保在背景動畫之上 */
+    max-width: 900px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+    color: #C0C8D6;
+    z-index: 2;
+    position: relative;
+    font-weight: 300;
+}
+
+/* 行動呼籲按鈕 */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #00F0FF, #00BFFF); /* 藍色漸變按鈕 */
+    color: #0A0F1A;
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.6); /* 發光陰影 */
+    z-index: 2;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.9);
+}
+
+.cta-button.secondary { /* 第二個CTA按鈕的樣式 */
+    background: none;
+    border: 2px solid #00F0FF;
+    color: #00F0FF;
+    box-shadow: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.cta-button.secondary:hover {
+    background-color: rgba(0, 240, 255, 0.1);
+    color: #00F0FF;
+    border-color: #00FFFF;
+}
+
+/* 各個內容區塊 */
+section {
+    padding: 6rem 5%;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* 確保內容在背景圖形之上 */
+}
+
+.features-overview {
+    background: #1A202C; /* 稍微淺一點的背景色 */
+    border-bottom: 1px solid rgba(0, 240, 255, 0.05);
+}
+
+.features-overview h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background-color: #0F1626; /* 卡片背景色 */
+    padding: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 240, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 240, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
+}
+
+.feature-item h3 {
+    color: #00F0FF;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.feature-item p {
+    color: #C0C8D6;
+    font-weight: 300;
+}
+
+.call-to-action {
+    background: linear-gradient(45deg, #0A0F1A, #1A202C);
+    padding: 5rem 5%;
+}
+
+.call-to-action h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.call-to-action p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: #C0C8D6;
+    font-weight: 300;
+}
+
+/* Footer */
 .footer {
-  background: #012b50;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9rem;
+    background-color: #05070F; /* 比背景更深的顏色 */
+    color: #6C7A89;
+    text-align: center;
+    padding: 2rem 5%;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+/* RWD 響應式設計 */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem 3%;
+    }
+    nav {
+        margin-top: 1rem;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr; /* 小螢幕下每行一個卡片 */
+    }
+    .feature-item {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    section {
+        padding: 4rem 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
 }
