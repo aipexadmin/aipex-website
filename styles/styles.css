@@ -1,22 +1,22 @@
 /* Custom Fonts ... (此部分保持不變) */
 @font-face {
-    font-family: 'Gen Jyuu Gothic'; /* 你為這個字型定義的名稱 */
+    font-family: 'Gen Jyuu Gothic';
     src: url('../public/fonts/GenJyuuGothic-Light.ttf') format('truetype');
-    font-weight: 300; /* 設定字重為 Light */
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gen Jyuu Gothic';
     src: url('../public/fonts/GenJyuuGothic-Normal.ttf') format('truetype');
-    font-weight: 400; /* 設定字重為 Normal */
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gen Jyuu Gothic';
     src: url('../public/fonts/GenJyuuGothic-Bold.ttf') format('truetype');
-    font-weight: 700; /* 設定字重為 Bold */
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -62,24 +62,43 @@ h3 { font-size: 1.8rem; }
     border-bottom: 1px solid rgba(91, 242, 252, 0.3);
 }
 
-/* ... 略過其他不變的樣式 ... */
+/* ... 略過其他不變的樣式，直到 .hero 區塊 ... */
 
 
-/* **重點修改部分**：將 hero 區塊的樣式合併 */
-.hero, .about-hero, .services-hero, .contact-hero { /* 將所有 hero 相關 class 都包含進來 */
-    min-height: 80vh; /* 調整高度，如果希望所有 hero 都像首頁一樣高 */
+/* **Hero 區塊 - 保持個別頁面的原有基礎樣式** */
+
+/* index.html 的 Hero 區塊 */
+.hero {
+    min-height: 80vh;
+    padding: 5rem 5% 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: linear-gradient(135deg, #0B132B, #1C2541);
-    position: relative;
-    overflow: hidden;
-    padding: 5rem 5% 3rem;
+    position: relative; /* 必須為 relative 以便偽元素定位 */
+    overflow: hidden; /* 必須為 hidden 以便隱藏超出範圍的動畫 */
 }
 
+/* About Page Specific Styles - 保持亮青藍色 */
+.about-hero, .services-hero, .contact-hero {
+    min-height: 40vh; /* 保持原有的較小高度 */
+    padding: 4rem 5%; /* 保持原有的 padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0B132B, #1C2541);
+    position: relative; /* 必須為 relative 以便偽元素定位 */
+    overflow: hidden; /* 必須為 hidden 以便隱藏超出範圍的動畫 */
+}
+
+/* **新增/調整部分**：將特效樣式抽離並應用到所有 hero 類別 */
+
 /* 亮青藍粒子動畫效果容器 - 應用到所有 hero 相關 class */
+/* 注意：這裡的選擇器包含了所有 hero 類別，並且只包含特效相關的必要屬性 */
 .hero::before,
 .hero::after,
 .about-hero::before,
@@ -95,7 +114,8 @@ h3 { font-size: 1.8rem; }
     width: 100%;
     height: 100%;
     background-repeat: repeat;
-    pointer-events: none;
+    pointer-events: none; /* 確保不影響滑鼠事件 */
+    /* background-image 和 animation 會在下方各自的規則中定義 */
 }
 
 /* 模擬遠處的星空 - 應用到所有 hero 相關 class */
@@ -177,32 +197,38 @@ h3 { font-size: 1.8rem; }
     90% { opacity: 0.55; }
 }
 
-/* 以下是原來針對不同 hero class 的樣式，現在因為要統一效果，所以可以簡化或合併 */
-/* 你原有的 About Page Specific Styles - 會被上面的 .hero, .about-hero, .services-hero, .contact-hero 覆蓋 */
-/* .about-hero, .services-hero, .contact-hero {
-    min-height: 40vh; // 這個會被上面的 80vh 覆蓋
-    padding: 4rem 5%; // 這個會被上面的 5rem 5% 3rem 覆蓋
-    // ... 其他屬性可能也要考慮是否統一或保留個別差異
-}
-*/
+/* **以下保持個別頁面的標題和標語樣式** */
 
-/* 由於你希望所有 hero 都有一樣的特效，可以考慮將 .hero h1 和 .hero p 的樣式也通用化 */
-.hero h1, .about-hero h1, .services-hero h1, .contact-hero h1 {
-    font-size: 3.8rem; /* 保持首頁的 h1 大小 */
+/* index.html 的 hero 內 h1 和 p */
+.hero h1 {
+    font-size: 3.8rem;
     margin-bottom: 1rem;
     z-index: 2;
     position: relative;
     max-width: 900px;
 }
 
-.hero p, .about-hero .tagline, .services-hero .tagline, .contact-hero .tagline {
-    font-size: 1.5rem; /* 保持首頁的 p 大小 */
+.hero p {
+    font-size: 1.5rem;
     max-width: 700px;
     margin-bottom: 2.5rem;
     color: #E6FFFF;
     z-index: 2;
     position: relative;
     font-weight: 300;
+}
+
+/* About/Services/Contact 頁面的 hero 內 h1 和 .tagline */
+.about-hero h1, .services-hero h1, .contact-hero h1 {
+    font-size: 3.5rem; /* 保持原有的 3.5rem */
+    margin-bottom: 0.5rem;
+    color: #5bf2fc;
+}
+
+.about-hero .tagline, .services-hero .tagline, .contact-hero .tagline {
+    font-size: 1.3rem; /* 保持原有的 1.3rem */
+    max-width: 800px;
+    color: #E6FFFF;
 }
 
 
