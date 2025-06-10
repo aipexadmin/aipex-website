@@ -393,14 +393,13 @@ section {
 }
 
 /* Our Story / Service Offerings Sections - 深藍背景 */
-.our-story, .service-offerings, .why-choose-us, .social-media-links { /* 移除了 .contact-info-form */
+.our-story, .service-offerings, .why-choose-us, .social-media-links {
     padding: 6rem 5%;
     text-align: center;
     background-color: #0B132B;
     border-bottom: 1px solid rgba(91, 242, 252, 0.1);
 }
 
-/* 將 contact-info-form 從上述移除，確保它有自己獨立的背景和 padding */
 /* Values Grid / Service Grid / Benefits Grid - 深藍卡片 */
 .values-grid, .service-grid, .benefits-grid {
     display: grid;
@@ -457,7 +456,7 @@ section {
 /* Contact Page Specific Styles - 保持亮青藍色 */
 
 /* 修正後的聯絡內容父容器，用於並排顯示 */
-.contact-sections-wrapper { /* 替換了原有的 .contact-info-form */
+.contact-sections-wrapper {
     display: flex; /* 啟用 Flexbox */
     flex-wrap: wrap; /* 允許項目換行，在小螢幕時自動堆疊 */
     justify-content: center; /* 水平居中對齊其子項目 */
@@ -468,15 +467,14 @@ section {
     border-bottom: 1px solid rgba(91, 242, 252, 0.1); /* 保持底部邊框 */
 }
 
-/* 聯絡方式和表單容器的卡片樣式 (已由您原有的 CSS 定義，我只確保選擇器正確) */
-.contact-methods, .contact-form-container {
-    flex: 1; /* 讓兩個項目平均分配可用空間 */
-    min-width: 320px; /* 每個項目的最小寬度，防止過窄 */
-    max-width: 500px; /* 每個項目的最大寬度 */
+/* 聯絡表單容器的卡片樣式 (維持不變) */
+.contact-form-container {
+    flex: 1; /* 讓其佔據一半可用空間 */
+    min-width: 320px; /* 最小寬度 */
+    max-width: 500px; /* 最大寬度 */
     text-align: left; /* 保持文字左對齊 */
-    margin-bottom: 3rem; /* 底部間距，在小螢幕堆疊時仍有效 */
+    margin-bottom: 3rem; /* 底部間距 */
     
-    /* 以下樣式是您原有的，確保卡片外觀 */
     background-color: #1C2541; /* 較淺的深藍背景，與卡片顏色一致 */
     padding: 2.5rem; /* 內距 */
     border-radius: 10px; /* 圓角 */
@@ -485,10 +483,34 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* 懸停動畫 */
 }
 
-/* 添加 hover 效果讓卡片更具互動性 (您原有的) */
-.contact-methods:hover, .contact-form-container:hover {
+/* 聯絡表單容器 hover 效果 (維持不變) */
+.contact-form-container:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(91, 242, 252, 0.3);
+}
+
+/* 聯絡資訊區域的樣式 (移除卡片效果) */
+.contact-methods {
+    flex: 1; /* 讓其佔據一半可用空間 */
+    min-width: 320px; /* 最小寬度 */
+    max-width: 500px; /* 最大寬度 */
+    text-align: left; /* 保持文字左對齊 */
+    margin-bottom: 3rem; /* 底部間距 */
+    
+    /* 移除所有卡片相關樣式 */
+    background-color: transparent; /* 背景透明 */
+    padding: 2.5rem; /* 保持內距，使其與表單區塊對齊 */
+    border-radius: 0; /* 移除圓角 */
+    border: none; /* 移除邊框 */
+    box-shadow: none; /* 移除陰影 */
+    transition: none; /* 移除過渡效果 */
+    transform: none; /* 移除任何變形 */
+}
+
+/* 確保 .contact-methods 即使 hover 也沒有效果 */
+.contact-methods:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .contact-methods h2, .contact-form-container h2 {
@@ -505,19 +527,21 @@ section {
 
 .detail-item h3 {
     font-size: 1.3rem;
-    color: #5bf2fc;
+    color: #E6FFFF; /* 設置為白色 */
     margin-bottom: 0.5rem;
+    text-shadow: none; /* 移除發光特效 */
 }
 
 .detail-item p, .detail-item a {
-    color: #E6FFFF;
+    color: #E6FFFF; /* 設置為白色 */
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 300;
+    text-shadow: none; /* 移除發光特效 */
 }
 
 .detail-item a:hover {
-    color: #5bf2fc;
+    color: #5bf2fc; /* 鼠標懸停時變回亮青藍 */
     text-decoration: underline;
 }
 
@@ -670,11 +694,11 @@ section {
         margin-right: auto;
     }
     /* 修正後的聯絡頁面 RWD 佈局 */
-    .contact-sections-wrapper { /* 替換了原有的 .contact-info-form */
+    .contact-sections-wrapper {
         flex-direction: column;
         align-items: center;
     }
-    .contact-methods, .contact-form-container {
+    .contact-form-container, .contact-methods { /* 這裡也包含 contact-methods */
         width: 90%;
         max-width: 500px;
         margin: 0 auto 2rem;
