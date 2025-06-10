@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
             value_integrity_title: 'Integrity',
             value_integrity_desc: 'We uphold the highest ethical standards, ensuring transparency, honesty, and trust in all our interactions.',
 
-            // Services Page specific translations (修正內容以匹配 services.html)
+            // Services Page specific translations (修正內容以匹配 services.html 的圖片路徑)
             services_hero_title: 'Our Services',
-            services_hero_tagline: 'Innovation Meets Expertise', // 修正為 tagline
-            service_offerings_title: 'What We Offer', // 修正 key 名稱
+            services_hero_tagline: 'Innovation Meets Expertise',
+            service_offerings_title: 'What We Offer',
 
             // Service Item 1
             service_title_1: '<img src="images/icons/1.png" alt="AI Icon">AI-Driven Innovation & Strategic Insight',
@@ -42,19 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
             service_title_2: '<img src="images/icons/03.png" alt="UX/UI Icon">User Experience & Interface Design (UX/UI)',
             service_desc_2: 'Crafting intuitive and engaging digital and physical interfaces, ensuring seamless interactions and exceptional user satisfaction.',
 
-            // Service Item 3 (保持 data-lang="service_3_desc" 的 key)
+            // Service Item 3
             service_title_3: '<img src="images/icons/industrial-design.png" alt="Industrial Design Icon">Industrial Design & Product Realization',
             service_3_desc: 'Transforming concepts into tangible products through expert industrial design, 3D modeling, rapid prototyping, optimized material selection, and robust production process consultation.',
 
-            // Service Item 6
+            // Service Item 6 (注意 HTML 中是 04.png)
             service_title_6: '<img src="images/icons/04.png" alt="AI Education Icon">AI Education & Application Training',
             service_desc_6: 'Providing comprehensive training and workshops on utilizing AI tools to enhance daily life, accelerate work processes, and meet various personal and professional needs.',
 
-            // Service Item 4
+            // Service Item 4 (注意 HTML 中是 05.png)
             service_title_4: '<img src="images/icons/05.png" alt="Brand Building Icon">Brand & Identity Development',
             service_desc_4: 'Building a comprehensive brand identity and strategy that enhances market presence, fosters recognition, and resonates with target audiences.',
 
-            // Service Item 5
+            // Service Item 5 (注意 HTML 中是 06.png)
             service_title_5: '<img src="images/icons/06.png" alt="Sustainable Icon">Sustainable Design Consulting',
             service_desc_5: 'Offering specialized consulting to integrate environmental and sustainability principles into product design and development, ensuring eco-conscious and responsible innovation.',
 
@@ -118,10 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
             value_integrity_title: '誠信',
             value_integrity_desc: '我們秉持最高的道德標準，確保所有互動的透明度、誠實和信任。',
 
-            // Services Page specific translations (修正內容以匹配 services.html)
+            // Services Page specific translations (修正內容以匹配 services.html 的圖片路徑)
             services_hero_title: '我們的服務',
-            services_hero_tagline: '創新遇見專業', // 修正為 tagline
-            service_offerings_title: '我們提供什麼', // 修正 key 名稱
+            services_hero_tagline: '創新遇見專業',
+            service_offerings_title: '我們提供什麼',
 
             // Service Item 1
             service_title_1: '<img src="images/icons/1.png" alt="AI Icon">AI 驅動創新與策略洞察',
@@ -131,19 +131,19 @@ document.addEventListener('DOMContentLoaded', () => {
             service_title_2: '<img src="images/icons/03.png" alt="UX/UI Icon">用戶體驗與介面設計 (UX/UI)',
             service_desc_2: '精心打造直觀且引人入勝的數位和實體介面，確保無縫互動和卓越的用戶滿意度。',
 
-            // Service Item 3 (保持 data-lang="service_3_desc" 的 key)
+            // Service Item 3
             service_title_3: '<img src="images/icons/industrial-design.png" alt="Industrial Design Icon">工業設計與產品實現',
             service_3_desc: '透過專業的工業設計、3D 模型、快速原型製作、優化材料選擇以及穩健的生產流程諮詢，將概念轉化為實體產品。',
 
-            // Service Item 6
+            // Service Item 6 (注意 HTML 中是 04.png)
             service_title_6: '<img src="images/icons/04.png" alt="AI 教育圖示">AI 教育與應用培訓',
             service_desc_6: '提供全面的培訓和工作坊，教授如何利用 AI 工具提升日常生活、加速工作流程，並滿足各種個人與專業需求。',
 
-            // Service Item 4
+            // Service Item 4 (注意 HTML 中是 05.png)
             service_title_4: '<img src="images/icons/05.png" alt="品牌建構圖示">品牌與形象發展',
             service_desc_4: '建立全面的品牌識別與策略，提升市場能見度，培養品牌認知，並與目標受眾產生共鳴。',
 
-            // Service Item 5
+            // Service Item 5 (注意 HTML 中是 06.png)
             service_title_5: '<img src="images/icons/06.png" alt="永續 圖示">永續性設計顧問',
             service_desc_5: '提供專業顧問服務，將環境與永續原則整合到產品設計與開發中，確保具備環保意識與負責任的創新。',
 
