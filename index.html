@@ -1,121 +1,64 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>AIPEX - Aurora Innovation Pioneer Exploration</title>
-
-    <link rel="stylesheet" href="styles/styles.css" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;700&family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&family=Lato:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIPEX - Aurora Innovation Pioneer Exploration</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <header class="header">
+        <div class="logo-area">
+            <img src="images/logo.png" class="logo" alt="AIPEX Logo">
+            <span>AIPEX</span>
+        </div>
+        <nav>
+            <a href="index.html" data-lang="home">Home</a>
+            <a href="about.html" data-lang="about">About</a>
+            <a href="services.html" data-lang="services">Services</a>
+            <a href="contact.html" data-lang="contact">Contact</a>
+            <a href="#" class="lang-switch" data-lang="lang_switch">中文</a>
+        </nav>
+    </header>
 
-    <header class="header">
+    <main>
+        <section class="hero">
+            <h1 data-lang="home_hero_title">Aurora Innovation Pioneer Exploration</h1>
+            <p data-lang="home_hero_subtitle">AI-driven product design at the cutting-edge: Pioneering innovation and sustainability to reshape industries and drive the future</p>
+            <a href="services.html" class="cta-button" data-lang="home_hero_cta_button">Explore Our Solutions</a>
+        </section>
 
-        <div class="logo-area">
+        <section class="features-overview">
+            <h2 data-lang="home_features_title">AI-Driven Design: Sculpting the Future of Innovation.</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3 data-lang="home_feature_1_title">AI-Driven Design</h3>
+                    <p data-lang="home_feature_1_desc">Leveraging advanced algorithms and machine learning to **deeply optimize product design processes**, significantly shortening development cycles and elevating innovation.</p>
+                </div>
+                <div class="feature-item">
+                    <h3 data-lang="home_feature_2_title">Intelligent Data Analysis</h3>
+                    <p data-lang="home_feature_2_desc">**Integrating big data with deep learning models** to provide precise, real-time insights for your decisions, transforming data into business intelligence.</p>
+                </div>
+                <div class="feature-item">
+                    <h3 data-lang="home_feature_3_title">Sustainable Solutions</h3>
+                    <p data-lang="home_feature_3_desc">Perfectly **blending AI technology with green tech** to create high-performance, low-energy consumption innovative products, leading industries towards a sustainable future.</p>
+                </div>
+            </div>
+        </section>
 
-            <img src="public/images/Pepidea_CI-3-04.png" class="logo" alt="AIPEX Logo">
+        <section class="call-to-action">
+            <h2 data-lang="home_cta_title">Ready to Pioneer the Future with AIPEX?</h2>
+            <p data-lang="home_cta_desc">Let our artificial intelligence technology inject new vitality into your business and jointly build the next innovation milestone.</p>
+            <a href="contact.html" class="cta-button secondary" data-lang="home_cta_button">Contact Us Now</a>
+        </section>
+    </main>
 
-            <span>AIPEX</span>
+    <footer class="footer">
+        <p data-lang="footer_copyright">&copy; 2025 AIPEX. All Rights Reserved.</p>
+        <p data-lang="footer_contact_email">Contact: susan.wang@aipextec.com</p>
+    </footer>
 
-        </div>
-
-        <nav>
-
-            <a href="index.html">Home</a>
-
-            <a href="about_en.html">About</a>
-
-            <a href="services_en.html">Services</a>
-
-            <a href="contact_en.html">Contact</a>
-
-            <a href="index_zh.html" class="lang-switch">中</a>
-
-        </nav>
-
-    </header>
-
-
-
-    <main>
-
-        <section class="hero">
-
-            <h1>Aurora Innovation Pioneer Exploration</h1>
-
-            <p>AI-driven product design at the cutting-edge: Pioneering innovation and sustainability to reshape industries and drive the future</p>
-
-            <a href="services_en.html" class="cta-button">Explore Our Solutions</a>
-
-        </section>
-
-
-
-        <section class="features-overview">
-
-            <h2>AI-Driven Design: Sculpting the Future of Innovation.</h2>
-
-            <div class="feature-grid">
-
-                <div class="feature-item">
-
-                    <h3>AI-Driven Design</h3>
-
-                    <p>Leveraging advanced algorithms and machine learning to **deeply optimize product design processes**, significantly shortening development cycles and elevating innovation.</p>
-
-                </div>
-
-                <div class="feature-item">
-
-                    <h3>Intelligent Data Analysis</h3>
-
-                    <p>**Integrating big data with deep learning models** to provide precise, real-time insights for your decisions, transforming data into business intelligence.</p>
-
-                </div>
-
-                <div class="feature-item">
-
-                    <h3>Sustainable Solutions</h3>
-
-                    <p>Perfectly **blending AI technology with green tech** to create high-performance, low-energy consumption innovative products, leading industries towards a sustainable future.</p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <section class="call-to-action">
-
-            <h2>Ready to Pioneer the Future with AIPEX?</h2>
-
-            <p>Let our artificial intelligence technology inject new vitality into your business and jointly build the next innovation milestone.</p>
-
-            <a href="contact_en.html" class="cta-button secondary">Contact Us Now</a>
-
-        </section>
-
-    </main>
-
-
-
-    <footer class="footer">
-
-        <p>© 2025 AIPEX. All Rights Reserved. Contact: susan.wang@aipextec.com</p>
-
-    </footer>
-
+    <script src="js/script.js"></script>
 </body>
-
 </html>
