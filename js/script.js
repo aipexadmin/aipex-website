@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             about: 'About',
             services: 'Services',
             contact: 'Contact',
-            lang_switch: '中', // 顯示「中」表示點擊後切換到中文
+            lang_switch: '中文', // 顯示「中文」表示點擊後切換到中文
 
             // About Page specific translations
             about_hero_title: 'About AIPEX',
@@ -29,21 +29,33 @@ document.addEventListener('DOMContentLoaded', () => {
             value_integrity_title: 'Integrity',
             value_integrity_desc: 'We uphold the highest ethical standards, ensuring transparency, honesty, and trust in all our interactions.',
 
-            // Services Page specific translations
+            // Services Page specific translations (修正內容以匹配 services.html)
             services_hero_title: 'Our Services',
-            services_hero_subtitle: 'Empowering Your Vision with Cutting-Edge AI and Design Solutions.',
-            our_expertise_title: 'Our Expertise',
-            service_title_1: 'AI Product Design & Development',
-            service_desc_1: 'Utilizing AI to innovate and optimize product conceptualization, design, and prototyping, ensuring market relevance and user engagement.',
-            service_title_2: 'Market Research & Trend Analysis',
-            service_desc_2: 'Leveraging AI-driven insights to identify market trends and consumer behaviors, guiding strategic product development and positioning.',
-            service_title_3: 'UX/UI Design & Optimization',
-            service_desc_3: 'Crafting intuitive and engaging user experiences with AI-enhanced design principles, ensuring seamless interaction and accessibility.',
-            service_title_6: 'AI Education & Application Training', // Changed service_title_6
-            service_desc_6: 'Providing comprehensive training and workshops on utilizing AI tools to enhance daily life, accelerate work processes, and meet various personal and professional needs.', // Changed service_desc_6
-            service_title_4: 'Brand & Identity Development',
+            services_hero_tagline: 'Innovation Meets Expertise', // 修正為 tagline
+            service_offerings_title: 'What We Offer', // 修正 key 名稱
+
+            // Service Item 1
+            service_title_1: '<img src="images/icons/1.png" alt="AI Icon">AI-Driven Innovation & Strategic Insight',
+            service_desc_1: 'Leveraging advanced AI to generate groundbreaking product and service designs, informed by comprehensive market research and trend analysis, pushing creative and strategic boundaries.',
+
+            // Service Item 2
+            service_title_2: '<img src="images/icons/03.png" alt="UX/UI Icon">User Experience & Interface Design (UX/UI)',
+            service_desc_2: 'Crafting intuitive and engaging digital and physical interfaces, ensuring seamless interactions and exceptional user satisfaction.',
+
+            // Service Item 3 (保持 data-lang="service_3_desc" 的 key)
+            service_title_3: '<img src="images/icons/industrial-design.png" alt="Industrial Design Icon">Industrial Design & Product Realization',
+            service_3_desc: 'Transforming concepts into tangible products through expert industrial design, 3D modeling, rapid prototyping, optimized material selection, and robust production process consultation.',
+
+            // Service Item 6
+            service_title_6: '<img src="images/icons/04.png" alt="AI Education Icon">AI Education & Application Training',
+            service_desc_6: 'Providing comprehensive training and workshops on utilizing AI tools to enhance daily life, accelerate work processes, and meet various personal and professional needs.',
+
+            // Service Item 4
+            service_title_4: '<img src="images/icons/05.png" alt="Brand Building Icon">Brand & Identity Development',
             service_desc_4: 'Building a comprehensive brand identity and strategy that enhances market presence, fosters recognition, and resonates with target audiences.',
-            service_title_5: 'Sustainable Design Consulting',
+
+            // Service Item 5
+            service_title_5: '<img src="images/icons/06.png" alt="Sustainable Icon">Sustainable Design Consulting',
             service_desc_5: 'Offering specialized consulting to integrate environmental and sustainability principles into product design and development, ensuring eco-conscious and responsible innovation.',
 
             // Contact Page specific translations
@@ -85,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             about: '關於我們',
             services: '服務項目',
             contact: '聯絡我們',
-            lang_switch: 'EN', // 顯示「EN」表示點擊後切換到英文
+            lang_switch: 'English', // 顯示「English」表示點擊後切換到英文
 
             // About Page specific translations
             about_hero_title: '關於 虎珀探索科技-AIPEX',
@@ -106,21 +118,33 @@ document.addEventListener('DOMContentLoaded', () => {
             value_integrity_title: '誠信',
             value_integrity_desc: '我們秉持最高的道德標準，確保所有互動的透明度、誠實和信任。',
 
-            // Services Page specific translations
+            // Services Page specific translations (修正內容以匹配 services.html)
             services_hero_title: '我們的服務',
-            services_hero_subtitle: '利用尖端AI與設計解決方案，賦能您的願景。',
-            our_expertise_title: '我們的專業知識',
-            service_title_1: 'AI產品設計與開發',
-            service_desc_1: '利用AI創新與優化產品概念化、設計與原型製作，確保市場相關性與使用者參與度。',
-            service_title_2: '市場研究與趨勢分析',
-            service_desc_2: '運用AI驅動的洞察力識別市場趨勢與消費者行為，指導策略性產品開發與定位。',
-            service_title_3: 'UX/UI設計與優化',
-            service_desc_3: '運用AI強化設計原則，打造直觀且引人入勝的使用者體驗，確保無縫互動與可訪問性。',
-            service_title_6: 'AI教育與應用培訓',
-            service_desc_6: '提供全面的培訓和工作坊，教授如何利用AI工具提升日常生活、加速工作流程，並滿足各種個人與專業需求。',
-            service_title_4: '品牌與形象發展',
+            services_hero_tagline: '創新遇見專業', // 修正為 tagline
+            service_offerings_title: '我們提供什麼', // 修正 key 名稱
+
+            // Service Item 1
+            service_title_1: '<img src="images/icons/1.png" alt="AI Icon">AI 驅動創新與策略洞察',
+            service_desc_1: '利用先進的 AI 演算法和機器學習，開發尖端解決方案，透過全面的市場研究和趨勢分析，生成突破性的產品和服務設計，推動創意和策略界限。',
+
+            // Service Item 2
+            service_title_2: '<img src="images/icons/03.png" alt="UX/UI Icon">用戶體驗與介面設計 (UX/UI)',
+            service_desc_2: '精心打造直觀且引人入勝的數位和實體介面，確保無縫互動和卓越的用戶滿意度。',
+
+            // Service Item 3 (保持 data-lang="service_3_desc" 的 key)
+            service_title_3: '<img src="images/icons/industrial-design.png" alt="Industrial Design Icon">工業設計與產品實現',
+            service_3_desc: '透過專業的工業設計、3D 模型、快速原型製作、優化材料選擇以及穩健的生產流程諮詢，將概念轉化為實體產品。',
+
+            // Service Item 6
+            service_title_6: '<img src="images/icons/04.png" alt="AI 教育圖示">AI 教育與應用培訓',
+            service_desc_6: '提供全面的培訓和工作坊，教授如何利用 AI 工具提升日常生活、加速工作流程，並滿足各種個人與專業需求。',
+
+            // Service Item 4
+            service_title_4: '<img src="images/icons/05.png" alt="品牌建構圖示">品牌與形象發展',
             service_desc_4: '建立全面的品牌識別與策略，提升市場能見度，培養品牌認知，並與目標受眾產生共鳴。',
-            service_title_5: '永續性設計顧問',
+
+            // Service Item 5
+            service_title_5: '<img src="images/icons/06.png" alt="永續 圖示">永續性設計顧問',
             service_desc_5: '提供專業顧問服務，將環境與永續原則整合到產品設計與開發中，確保具備環保意識與負責任的創新。',
 
             // Contact Page specific translations
@@ -159,33 +183,26 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     function updateContent() {
-        // 更新所有 data-lang 的文字內容
         document.querySelectorAll('[data-lang]').forEach(element => {
             const key = element.getAttribute('data-lang');
-            if (translations[currentLang] && translations[currentLang][key]) { // 檢查是否存在鍵值
+            // 確保翻譯內容存在，並且優先使用當前語言，否則使用英文（預設）
+            if (translations[currentLang] && translations[currentLang][key]) {
                 element.innerHTML = translations[currentLang][key];
-            } else {
-                // 如果當前語言沒有對應的翻譯，可以使用預設語言（如英文）
-                // 或直接不更新，保持原始內容
-                if (translations['en'] && translations['en'][key]) {
-                    element.innerHTML = translations['en'][key];
-                }
+            } else if (translations['en'] && translations['en'][key]) {
+                element.innerHTML = translations['en'][key];
             }
         });
         
-        // 更新 lang-switch button text
         langSwitchButton.textContent = translations[currentLang]['lang_switch'];
-        // 更新 HTML lang 屬性
         document.documentElement.lang = currentLang;
     }
 
-    // 當頁面載入時執行一次，以確保初始語言設定正確
     updateContent();
 
     langSwitchButton.addEventListener('click', (e) => {
         e.preventDefault();
         currentLang = currentLang === 'en' ? 'zh' : 'en';
         localStorage.setItem('lang', currentLang);
-        updateContent(); // 切換語言後，更新所有內容
+        updateContent();
     });
 });
