@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             about: 'About',
             services: 'Services',
             contact: 'Contact',
-            lang_switch: '中文', // 顯示「中文」表示點擊後切換到中文
+            lang_switch: '中', // 顯示「中」表示點擊後切換到中文
 
             // About Page specific translations
             about_hero_title: 'About AIPEX',
@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_form_submit_button: 'Send Message',
             contact_info_title: 'Our Contact Information',
             contact_info_email: 'Email: susan.wang@aipextec.com',
-            contact_info_phone: 'Phone: +886-987-654321',
-            contact_info_address: 'Address: 123 Innovation Blvd, Taipei City, Taiwan',
+            contact_info_phone: 'Phone: +886-2-27535556',
+            contact_info_address: 'Address: 5F.-2, No.123, Sec. 4, Bade Rd., Songshan Dist., Taipei City 105, Taiwan (R.O.C.)',
 
             // Index Page specific translations
             home_hero_title: 'Aurora Innovation Pioneer Exploration',
@@ -88,12 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
             lang_switch: 'EN', // 顯示「EN」表示點擊後切換到英文
 
             // About Page specific translations
-            about_hero_title: '關於 AIPEX',
-            about_hero_tagline: '極光創新先鋒探索',
+            about_hero_title: '關於 虎珀探索科技',
+            about_hero_tagline: '虎珀探索科技',
             our_story_title: '我們的故事',
-            our_story_p1: 'AIPEX 是一家開創性的 AI 驅動創新與設計顧問公司。我們運用 AI 工具加速開發並打造多元化、符合使用者需求的產品與服務解決方案，確保最佳效率和使用者滿意度。',
+            our_story_p1: '虎珀探索科技是一家專注於人工智慧驅動的創新、產品設計及顧問服務的公司。我們運用人工智慧工具加速開發並打造多元化、符合使用者需求的產品與服務解決方案，確保最佳效率和使用者滿意度。',
             our_story_p2: '我們致力於開拓技術與設計的新領域，創新和持續改進是我們的核心。我們的設計師、工程師和遠見者團隊無縫協作，利用最新技術和永續方法創造出既美觀又功能卓越的產品，同時最大限度地減少我們的生態足跡。',
-            our_story_p3: '與我們一起踏上探索與創新之旅。AIPEX 不僅僅是一家公司；它更是一項承諾，致力於塑造一個開創性設計與環境管理並行的未來。與我們一起探索可能性，開創下一代創新、永續且鼓舞人心的產品，共創一個更健康的地球。',
+            our_story_p3: '與我們一起踏上探索與創新之旅。虎珀探索科技不僅僅是一家公司；它更是一項承諾，致力於塑造一個開創性設計與環境管理並行的未來。與我們一起探索可能性，開創下一代創新、永續且鼓舞人心的產品，共創一個更健康的地球。',
             our_values_title: '我們的價值',
             value_innovation_title: '創新',
             value_innovation_desc: '我們擁抱好奇心和持續學習，培養一種新思想蓬勃發展並驅使我們超越傳統界限的文化。',
@@ -136,25 +136,25 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_form_submit_button: '發送訊息',
             contact_info_title: '我們的聯絡資訊',
             contact_info_email: '電子郵件: susan.wang@aipextec.com',
-            contact_info_phone: '電話: +886-987-654321',
-            contact_info_address: '地址: 台北市創新大道123號',
+            contact_info_phone: '電話: +886-2-27535556',
+            contact_info_address: '地址: 105台北市松山區八德路4段123號5F-2',
 
             // Index Page specific translations
-            home_hero_title: '極光創新先鋒探索',
+            home_hero_title: '虎珀探索科技',
             home_hero_subtitle: 'AI驅動的尖端產品設計：開創創新與永續，重塑產業並引領未來',
             home_hero_cta_button: '探索我們的解決方案',
             home_features_title: 'AI驅動設計：塑造創新的未來',
             home_feature_1_title: 'AI驅動設計',
-            home_feature_1_desc: '運用先進演算法與機器學習，**深度優化產品設計流程**，顯著縮短開發週期並提升創新層次。',
+            home_feature_1_desc: '運用先進演算法與機器學習，深度優化產品設計流程，顯著縮短開發週期並提升創新層次。',
             home_feature_2_title: '智能數據分析',
-            home_feature_2_desc: '**整合大數據與深度學習模型**，為您的決策提供精準的即時洞察，將數據轉化為商業智慧。',
+            home_feature_2_desc: '整合大數據與深度學習模型，為您的決策提供精準的即時洞察，將數據轉化為商業智慧。',
             home_feature_3_title: '永續解決方案',
-            home_feature_3_desc: '將**AI技術與綠色科技完美融合**，打造高效能、低能耗的創新產品，引領產業邁向永續未來。',
+            home_feature_3_desc: '將AI技術與綠色科技完美融合，打造高效能、低能耗的創新產品，引領產業邁向永續未來。',
             home_cta_title: '準備好與 AIPEX 共同開創未來了嗎？',
             home_cta_desc: '讓我們的AI技術為您的事業注入新活力，共同築建下一個創新里程碑。',
             home_cta_button: '立即聯繫我們',
 
-            footer_copyright: '&copy; 2025 AIPEX. 版權所有。',
+            footer_copyright: '&copy; 2025 虎珀探索科技股份有限公司. 版權所有。',
             footer_contact_email: '聯絡方式: susan.wang@aipextec.com'
         }
     };
