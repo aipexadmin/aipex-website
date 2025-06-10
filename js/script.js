@@ -1,27 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const langSwitchButton = document.querySelector('.lang-switch');
-    let currentLang = localStorage.getItem('lang') || 'en'; // 從 localStorage 獲取語言，或預設英文
+    let currentLang = localStorage.getItem('lang') || 'en'; // 預設英文
 
     const translations = {
         en: {
-            // Header/Navigation
             home: 'Home',
             about: 'About',
             services: 'Services',
             contact: 'Contact',
             lang_switch: '中文', // 顯示「中文」表示點擊後切換到中文
-            
-            // Index Page
-            index_hero_title: 'Pioneering the Future of Design with AI',
-            index_hero_subtitle: 'Innovate. Design. Sustain.',
-            index_intro_title: 'Welcome to AIPEX',
-            index_intro_p1: 'We are at the forefront of combining artificial intelligence with innovative design principles to create cutting-edge products and services.',
-            index_intro_p2: 'Our unique approach ensures efficiency, creativity, and sustainability in every project we undertake. Discover how AI can transform your vision into reality.',
-            index_cta_title: 'Ready to Innovate?',
-            index_cta_p: 'Contact us today to explore how AIPEX can help your next project.',
-            index_cta_button: 'Get Started',
-
-            // About Page
             about_hero_title: 'About AIPEX',
             about_hero_tagline: 'Aurora Innovation Pioneer Exploration',
             our_story_title: 'Our Story',
@@ -29,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             our_story_p2: 'We are dedicated to pioneering new frontiers in technology and design, with innovation and continuous improvement at our core. Our team of designers, engineers, and visionaries seamlessly collaborates, leveraging the latest technologies and sustainable methodologies to create products that are both aesthetically pleasing and functionally superior, all while minimizing our ecological footprint.',
             our_story_p3: 'Join us on a journey of discovery and innovation. AIPEX is more than a company; it\'s a commitment to shaping a future where groundbreaking design and environmental stewardship go hand in hand. Explore the possibilities with us as we pioneer the next generation of innovative, sustainable, and inspiring products for a healthier planet.',
             
-            // Services Page
+            // Services Page specific translations
             services_hero_title: 'Our Services',
             services_hero_tagline: 'Innovation Meets Expertise',
             service_offerings_title: 'What We Offer',
@@ -47,45 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
             service_title_5: '<img src="images/icons/sustainable.png" alt="Sustainable Icon">Sustainable Design Consulting',
             service_desc_5: 'Offering specialized consulting to integrate environmental and sustainability principles into product design and development, ensuring eco-conscious and responsible innovation.',
             
-            // Contact Page
-            contact_hero_title: 'Get in Touch',
-            contact_hero_tagline: 'We\'d love to hear from you!',
-            contact_form_title: 'Send us a message',
-            contact_form_name_label: 'Name:',
-            contact_form_name_placeholder: 'Your Name',
-            contact_form_email_label: 'Email:',
-            contact_form_email_placeholder: 'your@example.com',
-            contact_form_message_label: 'Message:',
-            contact_form_message_placeholder: 'Your message here...',
-            contact_form_submit_button: 'Send Message',
-            contact_info_title: 'Our Contact Information',
-            contact_info_email: 'Email: susan.wang@aipextec.com',
-            contact_info_phone: 'Phone: +886-987-654321',
-            contact_info_address: 'Address: 123 Innovation Blvd, Taipei City, Taiwan',
-
-            // Footer
             footer_copyright: '&copy; 2025 AIPEX. All Rights Reserved.',
             footer_contact_email: 'Contact: susan.wang@aipextec.com'
         },
         zh: {
-            // Header/Navigation
             home: '首頁',
             about: '關於我們',
             services: '服務',
             contact: '聯絡我們',
             lang_switch: 'EN', // 顯示「EN」表示點擊後切換到英文
-            
-            // Index Page
-            index_hero_title: 'AI驅動設計，開創未來',
-            index_hero_subtitle: '創新。設計。永續。',
-            index_intro_title: '歡迎來到 AIPEX',
-            index_intro_p1: '我們走在結合人工智慧與創新設計原則的最前沿，致力於創造領先業界的產品與服務。',
-            index_intro_p2: '我們獨特的方法確保了每個專案的效率、創造性和永續性。探索 AI 如何將您的願景轉化為現實。',
-            index_cta_title: '準備好創新了嗎？',
-            index_cta_p: '立即聯絡我們，探索 AIPEX 如何協助您的下一個專案。',
-            index_cta_button: '開始使用',
-
-            // About Page
             about_hero_title: '關於 AIPEX',
             about_hero_tagline: '極光創新先鋒探索 (Aurora Innovation Pioneer Exploration)',
             our_story_title: '我們的故事',
@@ -93,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             our_story_p2: '我們致力於開拓技術和設計的新領域，以創新和持續改進為核心。我們的設計師、工程師和富有遠見的團隊無縫協作，利用最新技術和永續方法來創造既美觀又功能卓越的產品，同時將我們的生態足跡降至最低。',
             our_story_p3: '加入我們的探索與創新之旅。AIPEX 不僅僅是一家公司；它更是一項塑造未來的承諾，讓開創性的設計與環境管理齊頭並進。與我們一起探索可能性，開創下一代創新、永續和鼓舞人心的產品，共創一個更健康的地球。',
 
-            // Services Page
+            // Services Page specific translations
             services_hero_title: '我們的服務',
             services_hero_tagline: '創新與專業的結合',
             service_offerings_title: '我們提供的服務',
@@ -111,23 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
             service_title_5: '<img src="images/icons/sustainable.png" alt="永續 圖示">永續性設計顧問',
             service_desc_5: '提供專業顧問服務，將環境與永續原則整合到產品設計與開發中，確保具備環保意識與負責任的創新。',
 
-            // Contact Page
-            contact_hero_title: '聯絡我們',
-            contact_hero_tagline: '我們很樂意聽取您的意見！',
-            contact_form_title: '給我們留言',
-            contact_form_name_label: '姓名:',
-            contact_form_name_placeholder: '您的姓名',
-            contact_form_email_label: '電子郵件:',
-            contact_form_email_placeholder: '您的@example.com',
-            contact_form_message_label: '訊息:',
-            contact_form_message_placeholder: '您想說的...',
-            contact_form_submit_button: '發送訊息',
-            contact_info_title: '我們的聯絡資訊',
-            contact_info_email: '電子郵件: susan.wang@aipextec.com',
-            contact_info_phone: '電話: +886-987-654321',
-            contact_info_address: '地址: 台北市創新大道123號',
-
-            // Footer
             footer_copyright: '&copy; 2025 AIPEX. 版權所有。',
             footer_contact_email: '聯絡方式: susan.wang@aipextec.com'
         }
@@ -154,14 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.lang = currentLang;
     }
 
-    // 首次載入時，根據 localStorage 或預設值設定語言
-    updateContent(); 
-
     langSwitchButton.addEventListener('click', (e) => {
         e.preventDefault();
         currentLang = currentLang === 'en' ? 'zh' : 'en';
         localStorage.setItem('lang', currentLang);
         updateContent(); // 切換語言後，更新當前頁面內容
-        // 由於所有頁面都使用單一 HTML 檔案，不需要重新載入頁面或改變 URL
+        // 由於所有頁面都使用單一 HTML 檔案，不需要重新載入頁面
+        // 如果頁面有其他需要初始化或依賴語言的 JS 行為，可能需要額外觸發
     });
+
+    // 首次載入時，根據 localStorage 或預設值設定語言
+    updateContent(); 
 });
