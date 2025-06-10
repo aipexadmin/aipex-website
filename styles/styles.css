@@ -118,7 +118,7 @@ nav a:hover {
 
 /* Hero 區塊 - 深藍漸變與亮青藍粒子 */
 .hero { /* index.html 的 hero */
-    min-height: 80vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,7 +127,7 @@ nav a:hover {
     background: linear-gradient(135deg, #0B132B, #1C2541); /* 深藍漸變 */
     position: relative;
     overflow: hidden;
-    padding: 5rem 5% 3rem; /* 保持首頁較大的 padding */
+    padding: 4.5rem 5% 3rem; /* 保持首頁較大的 padding */
     border-bottom: 1px solid rgba(91, 242, 252, 0.3); /* 為首頁 hero 底部添加發光線 */
     box-shadow: 0 5px 20px rgba(91, 242, 252, 0.1); /* 添加一個細微的發光陰影 */
 }
