@@ -155,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
             home_cta_button: '立即聯繫我們',
 
             footer_copyright: '&copy; 2025 虎珀探索科技股份有限公司. 版權所有。',
-            footer_contact_email: '聯絡方式: susan.wang@aipextec.com'
         }
     };
 
