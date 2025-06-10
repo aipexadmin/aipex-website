@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
             lang_switch: 'EN', // 顯示「EN」表示點擊後切換到英文
 
             // About Page specific translations
-            about_hero_title: '關於 虎珀探索科技',
-            about_hero_tagline: '虎珀探索科技',
+            about_hero_title: '關於 虎珀探索科技-AIPEX',
+            about_hero_tagline: 'Aurora Innovation Pioneer Exploration',
             our_story_title: '我們的故事',
             our_story_p1: '虎珀探索科技是一家專注於人工智慧驅動的創新、產品設計及顧問服務的公司。我們運用人工智慧工具加速開發並打造多元化、符合使用者需求的產品與服務解決方案，確保最佳效率和使用者滿意度。',
             our_story_p2: '我們致力於開拓技術與設計的新領域，創新和持續改進是我們的核心。我們的設計師、工程師和遠見者團隊無縫協作，利用最新技術和永續方法創造出既美觀又功能卓越的產品，同時最大限度地減少我們的生態足跡。',
