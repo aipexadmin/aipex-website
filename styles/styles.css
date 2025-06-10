@@ -393,14 +393,21 @@ section {
 }
 
 /* Our Story / Service Offerings Sections - 深藍背景 */
-.our-story, .service-offerings, .why-choose-us, .social-media-links { /* 移除了 .contact-info-form */
+.our-story, .service-offerings, .why-choose-us, .social-media-links {
     padding: 6rem 5%;
     text-align: center;
     background-color: #0B132B;
     border-bottom: 1px solid rgba(91, 242, 252, 0.1);
 }
 
-/* 將 contact-info-form 從上述移除，確保它有自己獨立的背景和 padding */
+.our-story p, .service-offerings p, .why-choose-us p {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    font-size: 1.1rem;
+    color: #E6FFFF;
+    font-weight: 300;
+}
+
 /* Values Grid / Service Grid / Benefits Grid - 深藍卡片 */
 .values-grid, .service-grid, .benefits-grid {
     display: grid;
@@ -455,25 +462,26 @@ section {
 }
 
 /* Contact Page Specific Styles - 保持亮青藍色 */
-.contact-info-form {
-    display: flex; /* 啟用 Flexbox */
+/* 新增的 Flexbox 容器，用於並排顯示聯絡資訊和表單 */
+.contact-sections-wrapper {
+    display: flex;
     flex-wrap: wrap; /* 允許項目換行，在小螢幕時自動堆疊 */
     justify-content: center; /* 水平居中對齊其子項目 */
-    align-items: flex-start; /* 頂部對齊子項目 */
+    align-items: flex-start; /* 頂部對齊子項目 (可以改為 center 如果需要居中) */
     gap: 5%; /* 兩個項目之間的間距 */
     padding: 6rem 5%; /* 保持與其他 section 一致的 padding */
     background-color: #0B132B; /* 保持背景色 */
     border-bottom: 1px solid rgba(91, 242, 252, 0.1); /* 保持底部邊框 */
 }
 
-.contact-methods, .contact-form-container {
+.contact-form-container, .contact-info {
     flex: 1; /* 讓兩個項目平均分配可用空間 */
     min-width: 320px; /* 每個項目的最小寬度，防止過窄 */
     max-width: 500px; /* 每個項目的最大寬度 */
     text-align: left; /* 保持文字左對齊 */
     margin-bottom: 3rem; /* 底部間距，在小螢幕堆疊時仍有效 */
     
-    /* 添加一些背景、邊框和陰影，讓它們看起來像卡片，更具設計感 */
+    /* 保持原有的卡片樣式 */
     background-color: #1C2541; /* 較淺的深藍背景，與卡片顏色一致 */
     padding: 2.5rem; /* 內距 */
     border-radius: 10px; /* 圓角 */
@@ -483,21 +491,25 @@ section {
 }
 
 /* 添加 hover 效果讓卡片更具互動性 */
-.contact-methods:hover, .contact-form-container:hover {
+.contact-form-container:hover, .contact-info:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(91, 242, 252, 0.3);
 }
 
-.contact-methods h2, .contact-form-container h2 {
+.contact-form-container h2, .contact-info h2 {
     text-align: center; /* 標題居中 */
     margin-bottom: 2rem;
     color: #5bf2fc; /* 亮青藍標題 */
 }
 
-/* 確保 detail-item 內部的內容不會被 text-align: center 影響 */
+/* 確保 contact-details 內部的內容不會被 text-align: center 影響 */
 .contact-details {
     margin-top: 2rem;
     text-align: left; /* 確保聯絡細節文字左對齊 */
+}
+
+.detail-item {
+    margin-bottom: 1rem; /* 每個聯絡細節項目的間距 */
 }
 
 .detail-item h3 {
@@ -566,7 +578,7 @@ section {
     align-items: center; /* 讓內部元素居中 */
 }
 
-.contact-form .cta-button {
+.contact-form .cta-button { /* 使用 .cta-button class */
     width: 100%; /* 確保按鈕佔滿寬度 */
     max-width: 300px; /* 控制按鈕的最大寬度 */
     border: none;
@@ -666,14 +678,19 @@ section {
         margin-left: auto;
         margin-right: auto;
     }
-    .contact-info-form {
-        flex-direction: column;
+    /* RWD for contact page sections */
+    .contact-sections-wrapper {
+        flex-direction: column; /* 在小螢幕上垂直堆疊 */
         align-items: center;
+        padding: 4rem 3%; /* 調整 padding */
     }
-    .contact-methods, .contact-form-container {
-        width: 90%;
+    .contact-form-container, .contact-info {
+        width: 90%; /* 在小螢幕上佔據更多寬度 */
         max-width: 500px;
-        margin: 0 auto 2rem;
+        margin: 0 auto 2rem; /* 居中並保持底部間距 */
+    }
+    .contact-details {
+        text-align: center; /* 在小螢幕上讓聯絡資訊居中 */
     }
 }
 
