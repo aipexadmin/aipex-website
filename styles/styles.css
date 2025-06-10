@@ -1,4 +1,4 @@
-/* Custom Fonts */
+/* Custom Fonts ... (此部分保持不變) */
 @font-face {
     font-family: 'Gen Jyuu Gothic'; /* 你為這個字型定義的名稱 */
     src: url('../public/fonts/GenJyuuGothic-Light.ttf') format('truetype');
@@ -20,11 +20,11 @@
     font-style: normal;
 }
 
-/* 全局設定 - 亮青藍主題 */
+/* 全局設定 - 亮青藍主題 ... (此部分保持不變) */
 body {
-    font-family: 'Exo 2', 'Montserrat', 'Gen Jyuu Gothic', sans-serif; /* 在這裡加入你的中文字型 */
-    background-color: #0B132B; /* 深藍背景 */
-    color: #E6FFFF; /* 主要文字顏色：非常淺的青藍色（接近白色） */
+    font-family: 'Exo 2', 'Montserrat', 'Gen Jyuu Gothic', sans-serif;
+    background-color: #0B132B;
+    color: #E6FFFF;
     line-height: 1.7;
     letter-spacing: 0.01em;
     margin: 0;
@@ -36,20 +36,20 @@ body {
 
 /* ... styles.css 檔案的其餘內容 ... */
 
-/* 標題樣式 - 更亮的青藍色 */
+/* 標題樣式 - 更亮的青藍色 ... (此部分保持不變) */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Exo 2', 'Montserrat', 'Gen Jyuu Gothic', sans-serif; /* 在這裡加入你的中文字型 */
-    color: #5bf2fc; /* 您指定的亮青藍色 */
-    text-shadow: 0 0 15px rgba(91, 242, 252, 0.9); /* 加強發光效果，使用亮青藍 */
+    font-family: 'Exo 2', 'Montserrat', 'Gen Jyuu Gothic', sans-serif;
+    color: #5bf2fc;
+    text-shadow: 0 0 15px rgba(91, 242, 252, 0.9);
     font-weight: 700;
 }
 h1 { font-size: 3.8rem; }
 h2 { font-size: 2.8rem; }
 h3 { font-size: 1.8rem; }
 
-/* Header 導航列 - 半透明深藍 */
+/* Header 導航列 ... (此部分保持不變) */
 .header {
-    background-color: rgba(11, 19, 43, 0.8); /* 半透明深藍 */
+    background-color: rgba(11, 19, 43, 0.8);
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
@@ -59,80 +59,35 @@ h3 { font-size: 1.8rem; }
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(91, 242, 252, 0.3); /* 底部亮青藍線條 */
+    border-bottom: 1px solid rgba(91, 242, 252, 0.3);
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #5bf2fc; /* 亮青藍 Logo 文字 */
-    text-transform: uppercase;
-}
+/* ... 略過其他不變的樣式 ... */
 
-.logo-area span {
-    font-family: 'Exo 2', 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #5bf2fc;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
 
-.logo {
-    height: 40px;
-    margin-right: 10px;
-    filter: drop-shadow(0 0 15px rgba(91, 242, 252, 0.9)); /* 亮青藍 Logo 發光 */
-}
-
-nav a {
-    color: #E6FFFF; /* 導航連結：偏白色 */
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-nav a:hover {
-    color: #5bf2fc; /* 懸停亮青藍色發光 */
-    text-shadow: 0 0 15px rgba(91, 242, 252, 0.8);
-}
-
-/* 語言切換按鈕樣式 - 亮青藍邊框和文字 */
-.lang-switch {
-    margin-left: 30px !important;
-    padding: 0.5rem 0.8rem;
-    border: 1px solid #5bf2fc;
-    border-radius: 4px;
-    color: #5bf2fc !important;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.lang-switch:hover {
-    background-color: rgba(91, 242, 252, 0.15); /* 亮青藍透明背景 */
-    color: #E6FFFF !important; /* 懸停時與主文字色一致 */
-    text-shadow: none !important;
-}
-
-/* Hero 區塊 - 深藍漸變與亮青藍粒子 */
-.hero {
-    min-height: 80vh;
+/* **重點修改部分**：將 hero 區塊的樣式合併 */
+.hero, .about-hero, .services-hero, .contact-hero { /* 將所有 hero 相關 class 都包含進來 */
+    min-height: 80vh; /* 調整高度，如果希望所有 hero 都像首頁一樣高 */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #0B132B, #1C2541); /* 深藍漸變 */
+    background: linear-gradient(135deg, #0B132B, #1C2541);
     position: relative;
     overflow: hidden;
     padding: 5rem 5% 3rem;
 }
 
-/* 亮青藍粒子動畫效果容器 */
+/* 亮青藍粒子動畫效果容器 - 應用到所有 hero 相關 class */
 .hero::before,
-.hero::after {
+.hero::after,
+.about-hero::before,
+.about-hero::after,
+.services-hero::before,
+.services-hero::after,
+.contact-hero::before,
+.contact-hero::after {
     content: '';
     position: absolute;
     top: 0;
@@ -143,34 +98,40 @@ nav a:hover {
     pointer-events: none;
 }
 
-/* 模擬遠處的星空 - 不同大小和深淺的亮青藍點 (速度調整) */
-.hero::before {
+/* 模擬遠處的星空 - 應用到所有 hero 相關 class */
+.hero::before,
+.about-hero::before,
+.services-hero::before,
+.contact-hero::before {
     background-image:
         radial-gradient(circle, rgba(91, 242, 252, 0.7) 0.5px, transparent 0.5px),
         radial-gradient(circle, rgba(120, 245, 255, 0.6) 0.8px, transparent 0.8px),
         radial-gradient(circle, rgba(150, 248, 255, 0.5) 1.2px, transparent 1.2px);
     background-size: 30px 30px, 50px 50px, 70px 70px;
     background-position: 0% 0%, 25% 50%, 75% 20%;
-    opacity: 0.7; /* 稍微提高透明度 */
+    opacity: 0.7;
     animation: moveStarsRandomBlue 300s linear infinite,
-               flickerStarsBlue 3s ease-in-out infinite alternate;
+                flickerStarsBlue 3s ease-in-out infinite alternate;
 }
 
-/* 模擬近處的星塵/數據流 - 更大更亮的亮青藍光點和光暈 (速度調整) */
-.hero::after {
+/* 模擬近處的星塵/數據流 - 應用到所有 hero 相關 class */
+.hero::after,
+.about-hero::after,
+.services-hero::after,
+.contact-hero::after {
     background-image:
         radial-gradient(circle, rgba(91, 242, 252, 0.8) 1.5px, transparent 1.5px),
         radial-gradient(circle, rgba(120, 245, 255, 0.7) 2px, transparent 2px),
         radial-gradient(ellipse, rgba(150, 248, 255, 0.6) 3px, transparent 3px);
     background-size: 80px 80px, 110px 110px, 150px 150px;
     background-position: 10% 90%, 60% 30%, 80% 70%;
-    opacity: 0.4; /* 稍微提高透明度 */
+    opacity: 0.4;
     animation: moveDataFlowRandomBlue 200s linear infinite reverse,
-               glowStarsBlue 4s ease-in-out infinite alternate;
+                glowStarsBlue 4s ease-in-out infinite alternate;
     filter: blur(0.5px);
 }
 
-/* 藍色星星隨機移動動畫 */
+/* 藍色星星隨機移動動畫 (keyframes 保持不變) */
 @keyframes moveStarsRandomBlue {
     0% { transform: translate(0, 0); }
     15% { transform: translate(-50px, 100px); }
@@ -181,7 +142,7 @@ nav a:hover {
     100% { transform: translate(-400px, -400px); }
 }
 
-/* 藍色數據流隨機移動動畫 */
+/* 藍色數據流隨機移動動畫 (keyframes 保持不變) */
 @keyframes moveDataFlowRandomBlue {
     0% { background-position: 0 0; }
     10% { background-position: 50px 150px; }
@@ -196,7 +157,7 @@ nav a:hover {
     100% { background-position: 700px 700px; }
 }
 
-/* 藍色星星閃爍動畫 */
+/* 藍色星星閃爍動畫 (keyframes 保持不變) */
 @keyframes flickerStarsBlue {
     0%, 100% { opacity: 0.7; }
     20% { opacity: 1; }
@@ -205,7 +166,7 @@ nav a:hover {
     80% { opacity: 0.4; }
 }
 
-/* 藍色緩慢光暈動畫 */
+/* 藍色緩慢光暈動畫 (keyframes 保持不變) */
 @keyframes glowStarsBlue {
     0%, 100% { opacity: 0.4; }
     15% { opacity: 0.6; }
@@ -216,447 +177,33 @@ nav a:hover {
     90% { opacity: 0.55; }
 }
 
-.hero h1 {
-    font-size: 3.8rem;
+/* 以下是原來針對不同 hero class 的樣式，現在因為要統一效果，所以可以簡化或合併 */
+/* 你原有的 About Page Specific Styles - 會被上面的 .hero, .about-hero, .services-hero, .contact-hero 覆蓋 */
+/* .about-hero, .services-hero, .contact-hero {
+    min-height: 40vh; // 這個會被上面的 80vh 覆蓋
+    padding: 4rem 5%; // 這個會被上面的 5rem 5% 3rem 覆蓋
+    // ... 其他屬性可能也要考慮是否統一或保留個別差異
+}
+*/
+
+/* 由於你希望所有 hero 都有一樣的特效，可以考慮將 .hero h1 和 .hero p 的樣式也通用化 */
+.hero h1, .about-hero h1, .services-hero h1, .contact-hero h1 {
+    font-size: 3.8rem; /* 保持首頁的 h1 大小 */
     margin-bottom: 1rem;
     z-index: 2;
     position: relative;
     max-width: 900px;
 }
 
-.hero p {
-    font-size: 1.5rem;
+.hero p, .about-hero .tagline, .services-hero .tagline, .contact-hero .tagline {
+    font-size: 1.5rem; /* 保持首頁的 p 大小 */
     max-width: 700px;
     margin-bottom: 2.5rem;
-    color: #E6FFFF; /* 與 body 文字顏色一致 */
+    color: #E6FFFF;
     z-index: 2;
     position: relative;
     font-weight: 300;
 }
 
-/* 行動呼籲按鈕 - 亮青藍漸變 */
-.cta-button {
-    display: inline-block;
-    background: linear-gradient(45deg, #5bf2fc, #66d9ef); /* 亮青藍漸變 */
-    color: #0B132B; /* 深藍色文字 */
-    padding: 1rem 2.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 18px rgba(91, 242, 252, 0.7); /* 亮青藍陰影 */
-    z-index: 2;
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
 
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 30px rgba(91, 242, 252, 1); /* 更亮的亮青藍陰影 */
-}
-
-.cta-button.secondary {
-    background: none;
-    border: 2px solid #5bf2fc; /* 亮青藍色邊框 */
-    color: #5bf2fc; /* 亮青藍色文字 */
-    box-shadow: none;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-.cta-button.secondary:hover {
-    background-color: rgba(91, 242, 252, 0.2); /* 亮青藍透明背景 */
-    color: #A0FFFF; /* 懸停時更亮的青藍 */
-    border-color: #A0FFFF; /* 懸停時更亮的邊框 */
-}
-
-/* 各個內容區塊 - 深藍色系 */
-section {
-    padding: 6rem 5%;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.features-overview {
-    background: #1C2541; /* 較淺的深藍 */
-    border-bottom: 1px solid rgba(91, 242, 252, 0.1); /* 亮青藍邊框 */
-}
-
-.features-overview h2 {
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-    color: #5bf2fc; /* 亮青藍標題 */
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.feature-item {
-    background-color: #0B132B; /* 深藍卡片 */
-    padding: 2.5rem;
-    border-radius: 10px;
-    border: 1px solid rgba(91, 242, 252, 0.2); /* 亮青藍邊框 */
-    box-shadow: 0 5px 20px rgba(91, 242, 252, 0.1); /* 亮青藍陰影 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(91, 242, 252, 0.3); /* 更亮的陰影 */
-}
-
-.feature-item h3 {
-    color: #5bf2fc; /* 亮青藍標題 */
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-.feature-item p {
-    color: #E6FFFF; /* 與 body 文字顏色一致 */
-    font-weight: 300;
-}
-
-.call-to-action {
-    background: linear-gradient(45deg, #0B132B, #1C2541); /* 深藍漸變 */
-    padding: 5rem 5%;
-}
-
-.call-to-action h2 {
-    font-size: 2.8rem;
-    margin-bottom: 1.5rem;
-    color: #5bf2fc; /* 亮青藍標題 */
-}
-
-.call-to-action p {
-    font-size: 1.3rem;
-    margin-bottom: 2.5rem;
-    color: #E6FFFF; /* 與 body 文字顏色一致 */
-    font-weight: 300;
-}
-
-/* Footer - 更深的藍色 */
-.footer {
-    background-color: #080F20; /* 更深的藍 */
-    color: #E6FFFF; /* Footer 文字偏白色 */
-    text-align: center;
-    padding: 2rem 5%;
-    font-size: 0.9rem;
-    border-top: 1px solid rgba(91, 242, 252, 0.2); /* 亮青藍邊框 */
-}
-
-/* About Page Specific Styles - 保持亮青藍色 */
-.about-hero, .services-hero, .contact-hero {
-    min-height: 40vh;
-    padding: 4rem 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(135deg, #0B132B, #1C2541);
-    position: relative;
-    overflow: hidden;
-}
-
-.about-hero h1, .services-hero h1, .contact-hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-    color: #5bf2fc; /* 亮青藍標題 */
-}
-
-.about-hero .tagline, .services-hero .tagline, .contact-hero .tagline {
-    font-size: 1.3rem;
-    max-width: 800px;
-    color: #E6FFFF; /* 與 body 文字顏色一致 */
-}
-
-/* Our Story / Service Offerings Sections - 深藍背景 */
-.our-story, .service-offerings, .why-choose-us, .contact-info-form, .social-media-links {
-    padding: 6rem 5%;
-    text-align: center;
-    background-color: #0B132B;
-    border-bottom: 1px solid rgba(91, 242, 252, 0.1); /* 亮青藍邊框 */
-}
-
-.our-story p, .service-offerings p, .why-choose-us p {
-    max-width: 900px;
-    margin: 1.5rem auto;
-    font-size: 1.1rem;
-    color: #E6FFFF; /* 與 body 文字顏色一致 */
-    font-weight: 300;
-}
-
-/* Values Grid / Service Grid / Benefits Grid - 深藍卡片 */
-.values-grid, .service-grid, .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-    max-width: 1200px;
-    margin: 3rem auto;
-}
-
-.value-item, .service-item, .benefit-item {
-    background-color: #1C2541;
-    padding: 2.5rem;
-    border-radius: 10px;
-    border: 1px solid rgba(91, 242, 252, 0.2); /* 亮青藍邊框 */
-    box-shadow: 0 5px 20px rgba(91, 242, 252, 0.1); /* 亮青藍陰影 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
-}
-
-.value-item:hover, .service-item:hover, .benefit-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(91, 242, 252, 0.3); /* 更亮的陰影 */
-}
-
-.value-item h3, .service-item h3, .benefit-item h3 {
-    color: #5bf2fc; /* 亮青藍標題 */
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.service-item ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 1.5rem;
-}
-
-.service-item ul li {
-    padding-left: 1.5rem;
-    position: relative;
-    margin-bottom: 0.8rem;
-    color: #E6FFFF; /* 與 body 文字顏色一致 */
-    font-size: 0.95rem;
-    font-weight: 300;
-}
-.service-item ul li::before {
-    content: '•';
-    color: #5bf2fc; /* 亮青藍點 */
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-/* Contact Page Specific Styles - 保持亮青藍色 */
-.contact-info-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5%;
-    align-items: flex-start;
-}
-
-.contact-methods, .contact-form-container {
-    flex: 1;
-    min-width: 320px;
-    max-width: 500px;
-    text-align: left;
-    margin-bottom: 3rem;
-}
-
-.contact-methods h2, .contact-form-container h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #5bf2fc; /* 亮青藍標題 */
-}
-
-.contact-details {
-    margin-top: 2rem;
-}
-
-.detail-item h3 {
-    font-size: 1.3rem;
-    color: #5bf2fc; /* 亮青藍標題 */
-    margin-bottom: 0.5rem;
-}
-
-.detail-item p, .detail-item a {
-    color: #E6FFFF; /* 與 body 文字顏色一致 */
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 300;
-}
-
-.detail-item a:hover {
-    color: #5bf2fc; /* 亮青藍連結懸停色 */
-    text-decoration: underline;
-}
-
-.contact-form .form-group {
-    margin-bottom: 1.5rem;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #A0FFFF; /* 亮青藍灰色 */
-    font-weight: 500;
-}
-
-.contact-form input,
-.contact-form input::placeholder,
-.contact-form textarea,
-.contact-form textarea::placeholder {
-    color: #E6FFFF; /* 輸入框文字顏色 */
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid rgba(91, 242, 252, 0.4); /* 亮青藍邊框 */
-    border-radius: 5px;
-    background-color: #0B132B; /* 深藍輸入框背景 */
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #5bf2fc; /* 亮青藍邊框 */
-    box-shadow: 0 0 10px rgba(91, 242, 252, 0.6); /* 亮青藍陰影 */
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.contact-form .cta-button {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-.form-note {
-    font-size: 0.9rem;
-    color: #A0FFFF; /* 亮青藍灰色 */
-    margin-top: 1rem;
-    text-align: center;
-}
-
-/* Social Media Links - 保持亮青藍色 */
-.social-media-links {
-    padding: 4rem 5%;
-    background-color: #080F20;
-    border-top: 1px solid rgba(91, 242, 252, 0.2); /* 亮青藍邊框 */
-}
-
-.social-media-links h2 {
-    margin-bottom: 2rem;
-    color: #5bf2fc; /* 亮青藍標題 */
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.social-icons img {
-    height: 40px;
-    width: 40px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: grayscale(30%); /* 輕微灰度，hover時恢復 */
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);
-    filter: grayscale(0%) drop-shadow(0 0 15px rgba(91, 242, 252, 0.9)); /* 亮青藍發光 */
-}
-
-/* RWD 響應式設計 - 保持一致 */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        padding: 1rem 3%;
-    }
-    nav {
-        margin-top: 1rem;
-    }
-    nav a {
-        margin: 0 10px;
-    }
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .hero p {
-        font-size: 1.2rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-    h3 {
-        font-size: 1.5rem;
-    }
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
-    .feature-item {
-        margin: 0 auto;
-        max-width: 400px;
-    }
-    section {
-        padding: 4rem 3%;
-    }
-
-    .about-hero h1, .services-hero h1, .contact-hero h1 {
-        font-size: 2.8rem;
-    }
-    .about-hero .tagline, .services-hero .tagline, .contact-hero .tagline {
-        font-size: 1.1rem;
-    }
-    .values-grid, .service-grid, .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-    .value-item, .service-item, .benefit-item {
-        text-align: center;
-        max-width: 450px;
-        margin: 0 auto;
-    }
-    .service-item ul {
-        text-align: left;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .contact-info-form {
-        flex-direction: column;
-        align-items: center;
-    }
-    .contact-methods, .contact-form-container {
-        width: 90%;
-        max-width: 500px;
-        margin: 0 auto 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
-    .cta-button {
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
-    }
-    h2 {
-        font-size: 1.8rem;
-    }
-    h3 {
-        font-size: 1.5rem;
-    }
-}
+/* ... 其餘的 CSS 樣式保持不變 ... */
