@@ -1,6 +1,28 @@
+/* Custom Fonts */
+@font-face {
+    font-family: 'Gen Jyuu Gothic'; /* 你為這個字型定義的名稱 */
+    src: url('../public/fonts/GenJyuuGothic-Light.ttf') format('truetype');
+    font-weight: 300; /* 設定字重為 Light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gen Jyuu Gothic';
+    src: url('../public/fonts/GenJyuuGothic-Normal.ttf') format('truetype');
+    font-weight: 400; /* 設定字重為 Normal */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gen Jyuu Gothic';
+    src: url('../public/fonts/GenJyuuGothic-Bold.ttf') format('truetype');
+    font-weight: 700; /* 設定字重為 Bold */
+    font-style: normal;
+}
+
 /* 全局設定 - 亮青藍主題 */
 body {
-    font-family: 'Exo 2', 'Montserrat', sans-serif;
+    font-family: 'Exo 2', 'Montserrat', 'Gen Jyuu Gothic', sans-serif; /* 在這裡加入你的中文字型 */
     background-color: #0B132B; /* 深藍背景 */
     color: #E6FFFF; /* 主要文字顏色：非常淺的青藍色（接近白色） */
     line-height: 1.7;
@@ -12,14 +34,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* ... styles.css 檔案的其餘內容 ... */
+
 /* 標題樣式 - 更亮的青藍色 */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Exo 2', 'Montserrat', sans-serif;
+    font-family: 'Exo 2', 'Montserrat', 'Gen Jyuu Gothic', sans-serif; /* 在這裡加入你的中文字型 */
     color: #5bf2fc; /* 您指定的亮青藍色 */
     text-shadow: 0 0 15px rgba(91, 242, 252, 0.9); /* 加強發光效果，使用亮青藍 */
     font-weight: 700;
 }
-
 h1 { font-size: 3.8rem; }
 h2 { font-size: 2.8rem; }
 h3 { font-size: 1.8rem; }
