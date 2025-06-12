@@ -456,7 +456,7 @@ section {
 
 /* === 新增這裡：針對 service-icon 內部圖片的樣式 === */
 .service-icon img {
-    width: 60px; /* 您想要的 icon 尺寸 */
+    width: 50px; /* 您想要的 icon 尺寸 */
     height: auto; /* 保持圖片比例 */
     display: block; /* 使圖片成為塊級元素 */
     margin: 0 auto; /* 水平居中圖片 */
