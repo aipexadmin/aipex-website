@@ -409,14 +409,30 @@ section {
     margin: 3rem auto;
 }
 
-.value-item, .service-item, .benefit-item {
+/* === 修改這裡：針對 benefit-item 的新樣式 === */
+.benefit-item {
     background-color: #1C2541;
     padding: 2.5rem;
     border-radius: 10px;
     border: 1px solid rgba(91, 242, 252, 0.2);
     box-shadow: 0 5px 20px rgba(91, 242, 252, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
+    
+    /* 啟用 Flexbox 來垂直堆疊內容並居中 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中對齊 Flex 項目的內容 */
+    text-align: center; /* 確保文字內容居中 */
+}
+
+.value-item, .service-item { /* 其他項目保持原來的樣式 */
+    background-color: #1C2541;
+    padding: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(91, 242, 252, 0.2);
+    box-shadow: 0 5px 20px rgba(91, 242, 252, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* 保持文字左對齊 */
 }
 
 .value-item:hover, .service-item:hover, .benefit-item:hover {
@@ -426,9 +442,27 @@ section {
 
 .value-item h3, .service-item h3, .benefit-item h3 {
     color: #5bf2fc;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem; /* 調整標題和段落間距 */
     font-size: 1.5rem;
+    margin-top: 0; /* 移除 h3 預設的頂部間距，讓 icon 間距生效 */
 }
+
+/* === 新增這裡：針對 service-icon 容器的樣式 === */
+.service-icon {
+    margin-bottom: 1.5rem; /* Icon 與 H3 標題之間的間距 */
+    display: block; /* 確保它獨立佔一行 */
+    /* 因為父級 benefit-item 已經用 align-items: center 居中，這裡不需要 text-align: center */
+}
+
+/* === 新增這裡：針對 service-icon 內部圖片的樣式 === */
+.service-icon img {
+    width: 60px; /* 您想要的 icon 尺寸 */
+    height: auto; /* 保持圖片比例 */
+    display: block; /* 使圖片成為塊級元素 */
+    margin: 0 auto; /* 水平居中圖片 */
+    filter: drop-shadow(0 0 20px rgba(91, 242, 252, 0.8)); /* 加強發光效果 */
+}
+
 
 .service-item ul {
     list-style: none;
@@ -452,22 +486,18 @@ section {
     left: 0;
     top: 0;
 }
-/* Service Icons in h3 */
-.benefit-item h3 img {
-    width: 35px; /* 調整您想要的寬度 */
-    height: auto; /* 保持圖片比例 */
-    vertical-align: middle; /* 使圖片與文字垂直對齊 */
-    margin-right: 10px; /* 圖片和文字之間的間距 */
-    filter: drop-shadow(0 0 5px rgba(91, 242, 252, 0.6)); /* 輕微發光效果 */
-}
 
-/* RWD adjustment for smaller screens if needed */
-@media (max-width: 768px) {
-    .benefit-item h3 img {
-        width: 25px; /* 在小螢幕上可以稍微縮小 */
-        margin-right: 8px;
-    }
+/* === 刪除或註釋掉這段舊的針對 h3 img 的樣式 === */
+/*
+.benefit-item h3 img {
+    width: 35px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px rgba(91, 242, 252, 0.6));
 }
+*/
+
 /* Contact Page Specific Styles - 保持亮青藍色 */
 
 /* 修正後的聯絡內容父容器，用於並排顯示 */
@@ -697,16 +727,24 @@ section {
     .values-grid, .service-grid, .benefits-grid {
         grid-template-columns: 1fr;
     }
+    /* === RWD 調整 for benefit-item 的置中布局 === */
     .value-item, .service-item, .benefit-item {
-        text-align: center;
         max-width: 450px;
         margin: 0 auto;
+        /* text-align: center; 已在 benefit-item 主規則中設置 */
     }
     .service-item ul {
         text-align: left;
         max-width: 300px;
         margin-left: auto;
         margin-right: auto;
+    }
+    /* === RWD 調整 for service-icon 尺寸和間距 === */
+    .service-icon {
+        margin-bottom: 1rem; /* 小螢幕下稍減間距 */
+    }
+    .service-icon img {
+        width: 50px; /* 小螢幕下 icon 尺寸稍小 */
     }
     /* 修正後的聯絡頁面 RWD 佈局 */
     .contact-sections-wrapper {
