@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Index Page specific translations
             home_hero_title: 'Aurora Innovation Pioneer Exploration',
-            home_hero_subtitle: 'AI-driven product design at the cutting-edge: Pioneering innovation and sustainability to reshape industries and drive the future',
+            home_hero_subtitle: 'AI-driven product design at the cutting-edge, Pioneering innovation and sustainability to reshape industries and drive the future',
             home_hero_cta_button: 'Explore Our Solutions',
             home_features_title: 'AI-Driven Design: Sculpting the Future of Innovation.',
             home_feature_1_title: 'AI-Driven Design',
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             about_hero_tagline: 'AIPEX-Aurora Innovation Pioneer Exploration',
             our_story_title: '我們的故事',
             our_story_p1: '虎珀探索科技是一家專注於人工智慧驅動的創新、產品設計及顧問服務的公司。我們運用人工智慧工具加速開發並打造多元化、符合使用者需求的產品與服務解決方案，確保最佳效率和使用者滿意度。',
-            our_story_p2: '我們致力於開拓技術與設計的新領域，創新和持續改進是我們的核心。我們的設計師、工程師和遠見者團隊無縫協作，利用最新技術和永續方法創造出既美觀又功能卓越的產品，同時最大限度地減少我們的生態足跡。',
+            our_story_p2: '我們致力於開拓技術與設計的新領域，創新和持續改進是我們的核心。我們的設計師、工程師和遠見者團隊無縫協作，利用最新AI技術和永續性設計的概念，創造出既美觀又功能卓越的產品，同時最大限度地減少我們的生態碳足跡。',
             our_story_p3: '與我們一起踏上探索與創新之旅。虎珀探索科技不僅僅是一家公司；它更是一項承諾，致力於塑造一個開創性設計與環境管理並行的未來。與我們一起探索可能性，開創下一代創新、永續且鼓舞人心的產品，共創一個更健康的地球。',
             our_values_title: '我們的價值',
             value_innovation_title: '創新',
