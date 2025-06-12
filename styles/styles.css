@@ -452,7 +452,22 @@ section {
     left: 0;
     top: 0;
 }
+/* Service Icons in h3 */
+.benefit-item h3 img {
+    width: 30px; /* 調整您想要的寬度 */
+    height: auto; /* 保持圖片比例 */
+    vertical-align: middle; /* 使圖片與文字垂直對齊 */
+    margin-right: 10px; /* 圖片和文字之間的間距 */
+    filter: drop-shadow(0 0 5px rgba(91, 242, 252, 0.6)); /* 輕微發光效果 */
+}
 
+/* RWD adjustment for smaller screens if needed */
+@media (max-width: 768px) {
+    .benefit-item h3 img {
+        width: 25px; /* 在小螢幕上可以稍微縮小 */
+        margin-right: 8px;
+    }
+}
 /* Contact Page Specific Styles - 保持亮青藍色 */
 
 /* 修正後的聯絡內容父容器，用於並排顯示 */
