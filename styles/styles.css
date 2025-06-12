@@ -63,24 +63,31 @@ h3 { font-size: 1.8rem; }
 .logo-area {
     display: flex;
     align-items: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #5bf2fc;
-    text-transform: uppercase;
+    /* 這裡的 font-size, font-weight, color, text-transform 可以移除，因為 span 會覆蓋 */
+    /* font-size: 1.8rem; */
+    /* font-weight: bold; */
+    /* color: #5bf2fc; */
+    /* text-transform: uppercase; */
 }
 
+/* 解決 LOGO 文字看不清的問題 */
 .logo-area span {
     font-family: 'Exo 2', 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: bold;
-    color: #5bf2fc;
+    color: #E6FFFF; /* 將文字顏色改為淺色，與 body 文字色一致 */
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    
+    /* 顯式移除任何可能造成黑色邊框或陰影的樣式 */
+    -webkit-text-stroke: none; /* 移除 -webkit-text-stroke 邊框效果 */
+    text-shadow: none; /* 移除 text-shadow 陰影效果 */
 }
 
 .logo {
     height: 40px;
     margin-right: 10px;
+    /* filter 應用在圖片本身，可以保持 */
     filter: drop-shadow(0 0 15px rgba(91, 242, 252, 0.9));
 }
 
@@ -132,8 +139,8 @@ nav a:hover {
 
 /* About, Services, Contact Page Specific Hero Styles */
 .about-hero, .services-hero, .contact-hero {
-    min-height: 30vh; /* 可以進一步縮小高度，例如從 40vh 改為 30vh */
-    padding: 2.5rem 5%; /* **修改點：縮小上下間距** */
+    min-height: 30vh;
+    padding: 2.5rem 5%; /* 縮小上下間距 */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +149,7 @@ nav a:hover {
     background: linear-gradient(135deg, #0B132B, #1C2541);
     position: relative;
     overflow: hidden;
-    border-bottom: 1px solid rgba(91, 242, 252, 0.3); /* **新增點：為其他頁面 hero 底部添加發光線** */
+    border-bottom: 1px solid rgba(91, 242, 252, 0.3); /* 為其他頁面 hero 底部添加發光線 */
     box-shadow: 0 5px 20px rgba(91, 242, 252, 0.1); /* 添加一個細微的發光陰影 */
 }
 
@@ -462,7 +469,6 @@ section {
     margin: 0 auto; /* 水平居中圖片 */
     filter: drop-shadow(0 0 20px rgba(91, 242, 252, 0.8)); /* 加強發光效果 */
 }
-
 
 .service-item ul {
     list-style: none;
