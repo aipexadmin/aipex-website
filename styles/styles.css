@@ -109,8 +109,8 @@ nav a:hover {
 .lang-switch {
     margin-left: 25px !important;
     padding: 0.4rem 0.4rem;
-    width: 45px;            /* 設定固定寬度 */
-    height: 45px;           /* 設定固定高度，使寬高相同變為正方形 */
+    width: 50px;            /* 設定固定寬度 */
+    height: 50px;           /* 設定固定高度，使寬高相同變為正方形 */
     border: 1px solid #5bf2fc;
     border-radius: 4px;
     color: #5bf2fc !important;
