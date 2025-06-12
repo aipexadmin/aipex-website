@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const langSwitchButton = document.querySelector('.lang-switch');
-    let currentLang = localStorage.getItem('lang') || 'en'; // 預設英文
+    let currentLang = localStorage.getItem('lang') || 'en'; // 從 localStorage 獲取語言
 
     const translations = {
         en: {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             value_integrity_title: 'Integrity',
             value_integrity_desc: 'We uphold the highest ethical standards, ensuring transparency, honesty, and trust in all our interactions.',
 
-            // Services Page specific translations (已移除圖片標籤)
+            // Services Page specific translations
             services_hero_title: 'Our Services',
             services_hero_tagline: 'Innovation Meets Expertise',
             service_offerings_title: 'What We Offer',
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Contact Page specific translations
             contact_hero_title: 'Get in Touch',
-            contact_hero_subtitle: 'We\'d love to hear from you. Fill out the form below or reach out directly.',
+            contact_hero_subtitle: 'We\'d love to hear from you. Fill out the form below or reach out directly.', // 將 tagline 改為 subtitle
             contact_form_title: 'Send Us a Message',
             contact_form_name_label: 'Name:',
             contact_form_name_placeholder: 'Your Name',
@@ -69,10 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_form_message_label: 'Message:',
             contact_form_message_placeholder: 'Your message here...',
             contact_form_submit_button: 'Send Message',
+            contact_form_note: 'We will reply to you as soon as possible.', // 新增
             contact_info_title: 'Our Contact Information',
-            contact_info_email: 'Email: susan.wang@aipextec.com',
-            contact_info_phone: 'Phone: +886-2-27535556',
-            contact_info_address: 'Address: 5F.-2, No.123, Sec. 4, Bade Rd., Songshan Dist., Taipei City 105, Taiwan (R.O.C.)',
+            contact_info_email_label: 'Email:', // 新增
+            contact_info_email_value: 'susan.wang@aipextec.com', // 使用你提供的正確資訊
+            contact_info_phone_label: 'Phone:', // 新增
+            contact_info_phone_value: '+886-2-27535556', // 使用你提供的正確資訊
+            contact_info_address_label: 'Address:', // 新增
+            contact_info_address_value: '5F.-2, No.123, Sec. 4, Bade Rd., Songshan Dist., Taipei City 105, Taiwan (R.O.C.)', // 使用你提供的正確資訊
+            social_media_title: 'Connect With Us',
 
             // Index Page specific translations
             home_hero_title: 'Aurora Innovation Pioneer Exploration',
@@ -118,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             value_integrity_title: '誠信',
             value_integrity_desc: '我們秉持最高的道德標準，確保所有互動的透明度、誠實和信任。',
 
-            // Services Page specific translations (已移除圖片標籤)
+            // Services Page specific translations
             services_hero_title: '我們的服務',
             services_hero_tagline: '創新遇見專業',
             service_offerings_title: '我們提供什麼',
@@ -158,10 +163,15 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_form_message_label: '訊息：',
             contact_form_message_placeholder: '您的訊息...',
             contact_form_submit_button: '發送訊息',
+            contact_form_note: '我們會盡快回覆您。', // 新增
             contact_info_title: '我們的聯絡資訊',
-            contact_info_email: '電子郵件: susan.wang@aipextec.com',
-            contact_info_phone: '電話: +886-2-27535556',
-            contact_info_address: '地址: 105台北市松山區八德路4段123號5F-2',
+            contact_info_email_label: '電子郵件:', // 新增
+            contact_info_email_value: 'susan.wang@aipextec.com', // 使用你提供的正確資訊
+            contact_info_phone_label: '電話:', // 新增
+            contact_info_phone_value: '+886-2-27535556', // 使用你提供的正確資訊
+            contact_info_address_label: '地址:', // 新增
+            contact_info_address_value: '105台北市松山區八德路4段123號5F-2', // 使用你提供的正確資訊
+            social_media_title: '聯繫我們',
 
             // Index Page specific translations
             home_hero_title: '虎珀探索科技',
@@ -186,24 +196,38 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateContent() {
         document.querySelectorAll('[data-lang]').forEach(element => {
             const key = element.getAttribute('data-lang');
+            let text = '';
+
             // 確保翻譯內容存在，並且優先使用當前語言，否則使用英文（預設）
             if (translations[currentLang] && translations[currentLang][key]) {
-                element.innerHTML = translations[currentLang][key];
+                text = translations[currentLang][key];
             } else if (translations['en'] && translations['en'][key]) {
-                element.innerHTML = translations['en'][key];
+                text = translations['en'][key];
+            }
+
+            // 檢查是否為 input 或 textarea，如果是則設定 placeholder
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.setAttribute('placeholder', text);
+            } else {
+                // 對於其他元素，設定 innerHTML
+                element.innerHTML = text;
             }
         });
         
+        // 確保語言切換按鈕文字正確
         langSwitchButton.textContent = translations[currentLang]['lang_switch'];
+        // 更新 HTML 語言屬性
         document.documentElement.lang = currentLang;
     }
 
+    // 初始化內容
     updateContent();
 
+    // 語言切換按鈕事件監聽器
     langSwitchButton.addEventListener('click', (e) => {
         e.preventDefault();
         currentLang = currentLang === 'en' ? 'zh' : 'en';
-        localStorage.setItem('lang', currentLang);
-        updateContent();
+        localStorage.setItem('lang', currentLang); // 將選擇的語言儲存到 localStorage
+        updateContent(); // 更新頁面內容
     });
 });
