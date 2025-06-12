@@ -29,33 +29,33 @@ document.addEventListener('DOMContentLoaded', () => {
             value_integrity_title: 'Integrity',
             value_integrity_desc: 'We uphold the highest ethical standards, ensuring transparency, honesty, and trust in all our interactions.',
 
-            // Services Page specific translations (修正內容以匹配 services.html 的圖片路徑)
+            // Services Page specific translations (修正內容以匹配 services.html 的圖片路徑和名稱)
             services_hero_title: 'Our Services',
             services_hero_tagline: 'Innovation Meets Expertise',
             service_offerings_title: 'What We Offer',
 
             // Service Item 1
-            service_title_1: '<img src="public/images/icons/1.png" alt="AI Icon">AI-Driven Innovation & Strategic Insight',
+            service_title_1: '<img src="images/icons/ai-innovation.png" alt="AI Icon">AI-Driven Innovation & Strategic Insight',
             service_desc_1: 'Leveraging advanced AI to generate groundbreaking product and service designs, informed by comprehensive market research and trend analysis, pushing creative and strategic boundaries.',
 
             // Service Item 2
-            service_title_2: '<img src="public/images/icons/03.png" alt="UX/UI Icon">User Experience & Interface Design (UX/UI)',
+            service_title_2: '<img src="images/icons/ux-ui.png" alt="UX/UI Icon">User Experience & Interface Design (UX/UI)',
             service_desc_2: 'Crafting intuitive and engaging digital and physical interfaces, ensuring seamless interactions and exceptional user satisfaction.',
 
             // Service Item 3
-            service_title_3: '<img src="public/images/icons/industrial-design.png" alt="Industrial Design Icon">Industrial Design & Product Realization',
+            service_title_3: '<img src="images/icons/industrial-design.png" alt="Industrial Design Icon">Industrial Design & Product Realization',
             service_3_desc: 'Transforming concepts into tangible products through expert industrial design, 3D modeling, rapid prototyping, optimized material selection, and robust production process consultation.',
 
-            // Service Item 6 (注意 HTML 中是 04.png)
-            service_title_6: '<img src="public/images/icons/04.png" alt="AI Education Icon">AI Education & Application Training',
+            // Service Item 6
+            service_title_6: '<img src="images/icons/ai-education.png" alt="AI Education Icon">AI Education & Application Training',
             service_desc_6: 'Providing comprehensive training and workshops on utilizing AI tools to enhance daily life, accelerate work processes, and meet various personal and professional needs.',
 
-            // Service Item 4 (注意 HTML 中是 05.png)
-            service_title_4: '<img src="public/images/icons/05.png" alt="Brand Building Icon">Brand & Identity Development',
+            // Service Item 4
+            service_title_4: '<img src="images/icons/brand-building.png" alt="Brand Building Icon">Brand & Identity Development',
             service_desc_4: 'Building a comprehensive brand identity and strategy that enhances market presence, fosters recognition, and resonates with target audiences.',
 
-            // Service Item 5 (注意 HTML 中是 06.png)
-            service_title_5: '<img src="public/images/icons/06.png" alt="Sustainable Icon">Sustainable Design Consulting',
+            // Service Item 5
+            service_title_5: '<img src="images/icons/sustainable.png" alt="Sustainable Icon">Sustainable Design Consulting',
             service_desc_5: 'Offering specialized consulting to integrate environmental and sustainability principles into product design and development, ensuring eco-conscious and responsible innovation.',
 
             // Contact Page specific translations
@@ -80,11 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
             home_hero_cta_button: 'Explore Our Solutions',
             home_features_title: 'AI-Driven Design: Sculpting the Future of Innovation.',
             home_feature_1_title: 'AI-Driven Design',
-            home_feature_1_desc: 'Leveraging advanced algorithms and machine learning to **deeply optimize product design processes**, significantly shortening development cycles and elevating innovation.',
+            home_feature_1_desc: 'Leveraging advanced algorithms and machine learning to deeply optimize product design processes, significantly shortening development cycles and elevating innovation.',
             home_feature_2_title: 'Intelligent Data Analysis',
-            home_feature_2_desc: '**Integrating big data with deep learning models** to provide precise, real-time insights for your decisions, transforming data into business intelligence.',
+            home_feature_2_desc: 'Integrating big data with deep learning models to provide precise, real-time insights for your decisions, transforming data into business intelligence.',
             home_feature_3_title: 'Sustainable Solutions',
-            home_feature_3_desc: 'Perfectly **blending AI technology with green tech** to create high-performance, low-energy consumption innovative products, leading industries towards a sustainable future.',
+            home_feature_3_desc: 'Perfectly blending AI technology with green tech to create high-performance, low-energy consumption innovative products, leading industries towards a sustainable future.',
             home_cta_title: 'Ready to Pioneer the Future with AIPEX?',
             home_cta_desc: 'Let our artificial intelligence technology inject new vitality into your business and jointly build the next innovation milestone.',
             home_cta_button: 'Contact Us Now',
@@ -118,33 +118,33 @@ document.addEventListener('DOMContentLoaded', () => {
             value_integrity_title: '誠信',
             value_integrity_desc: '我們秉持最高的道德標準，確保所有互動的透明度、誠實和信任。',
 
-            // Services Page specific translations (修正內容以匹配 services.html 的圖片路徑)
+            // Services Page specific translations (修正內容以匹配 services.html 的圖片路徑和名稱)
             services_hero_title: '我們的服務',
             services_hero_tagline: '創新遇見專業',
             service_offerings_title: '我們提供什麼',
 
             // Service Item 1
-            service_title_1: '<img src="public/images/icons/1.png" alt="AI Icon">AI 驅動創新與策略洞察',
+            service_title_1: '<img src="images/icons/ai-innovation.png" alt="AI Icon">AI 驅動創新與策略洞察',
             service_desc_1: '利用先進的 AI 演算法和機器學習，開發尖端解決方案，透過全面的市場研究和趨勢分析，生成突破性的產品和服務設計，推動創意和策略界限。',
 
             // Service Item 2
-            service_title_2: '<img src="public/images/icons/03.png" alt="UX/UI Icon">用戶體驗與介面設計 (UX/UI)',
+            service_title_2: '<img src="images/icons/ux-ui.png" alt="UX/UI Icon">用戶體驗與介面設計 (UX/UI)',
             service_desc_2: '精心打造直觀且引人入勝的數位和實體介面，確保無縫互動和卓越的用戶滿意度。',
 
             // Service Item 3
             service_title_3: '<img src="images/icons/industrial-design.png" alt="Industrial Design Icon">工業設計與產品實現',
             service_3_desc: '透過專業的工業設計、3D 模型、快速原型製作、優化材料選擇以及穩健的生產流程諮詢，將概念轉化為實體產品。',
 
-            // Service Item 6 (注意 HTML 中是 04.png)
-            service_title_6: '<img src="public/images/icons/04.png" alt="AI 教育圖示">AI 教育與應用培訓',
+            // Service Item 6
+            service_title_6: '<img src="images/icons/ai-education.png" alt="AI 教育圖示">AI 教育與應用培訓',
             service_desc_6: '提供全面的培訓和工作坊，教授如何利用 AI 工具提升日常生活、加速工作流程，並滿足各種個人與專業需求。',
 
-            // Service Item 4 (注意 HTML 中是 05.png)
-            service_title_4: '<img src="public/images/icons/05.png" alt="品牌建構圖示">品牌與形象發展',
+            // Service Item 4
+            service_title_4: '<img src="images/icons/brand-building.png" alt="品牌建構圖示">品牌與形象發展',
             service_desc_4: '建立全面的品牌識別與策略，提升市場能見度，培養品牌認知，並與目標受眾產生共鳴。',
 
-            // Service Item 5 (注意 HTML 中是 06.png)
-            service_title_5: '<img src="public/images/icons/06.png" alt="永續 圖示">永續性設計顧問',
+            // Service Item 5
+            service_title_5: '<img src="images/icons/sustainable.png" alt="永續 圖示">永續性設計顧問',
             service_desc_5: '提供專業顧問服務，將環境與永續原則整合到產品設計與開發中，確保具備環保意識與負責任的創新。',
 
             // Contact Page specific translations
@@ -179,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
             home_cta_button: '立即聯繫我們',
 
             footer_copyright: '&copy; 2025 虎珀探索科技股份有限公司. 版權所有。',
+            footer_contact_email: '電子郵件: susan.wang@aipextec.com'
         }
     };
 
