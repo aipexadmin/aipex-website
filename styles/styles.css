@@ -107,30 +107,21 @@ nav a:hover {
 /* 語言切換按鈕樣式 - 亮青藍邊框和文字 */
 
 .lang-switch {
-
     margin-left: 25px !important;
-
     padding: 0.3rem 0.3rem;
-
-    border: 0.9rem solid #5bf2fc;
+    font-size: 0.9rem;      /* 稍微減小字體大小 */
     width: 40px;            /* 設定固定寬度 */
     height: 40px;           /* 設定固定高度，使寬高相同變為正方形 */
+    border: 1px solid #5bf2fc;
     border-radius: 4px;
-
     color: #5bf2fc !important;
-
     font-weight: bold;
-
     transition: background-color 0.3s ease, color 0.3s ease;
-
 }
 
 .lang-switch:hover {
-
     background-color: rgba(91, 242, 252, 0.15);
-
     color: #E6FFFF !important;
-
     text-shadow: none !important;
 }
 
