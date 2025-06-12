@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_info_phone_value: '+886-2-27535556', // 使用你提供的正確資訊
             contact_info_address_label: 'Address:', // 新增
             contact_info_address_value: '5F.-2, No.123, Sec. 4, Bade Rd., Songshan Dist., Taipei City 105, Taiwan (R.O.C.)', // 使用你提供的正確資訊
-            social_media_title: 'Connect With Us',
+            social_media_title: 'Let`s Spark Innovation Together!',
 
             // Index Page specific translations
             home_hero_title: 'Aurora Innovation Pioneer Exploration',
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_info_phone_value: '+886-2-27535556', // 使用你提供的正確資訊
             contact_info_address_label: '地址:', // 新增
             contact_info_address_value: '105台北市松山區八德路4段123號5F-2', // 使用你提供的正確資訊
-            social_media_title: '聯繫我們',
+            social_media_title: '讓我們一起激發創新！',
 
             // Index Page specific translations
             home_hero_title: '虎珀探索科技',
