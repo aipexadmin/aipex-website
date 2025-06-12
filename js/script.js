@@ -175,17 +175,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Index Page specific translations
             home_hero_title: '虎珀探索科技',
-            home_hero_subtitle: 'AI驅動的尖端產品設計：開創創新與永續，重塑產業並引領未來',
+            home_hero_subtitle: 'AI 驅動的前沿產品設計，開創創新與永續的新典範，重塑產業樣貌，驅動未來發展',
             home_hero_cta_button: '探索我們的解決方案',
             home_features_title: 'AI驅動設計：塑造創新的未來',
             home_feature_1_title: 'AI驅動設計',
-            home_feature_1_desc: '運用先進演算法與機器學習，深度優化產品設計流程，顯著縮短開發週期並提升創新層次。',
+            home_feature_1_desc: '運用先進人工智慧工具，深度優化產品設計流程，顯著縮短開發週期並提升創新層次。',
             home_feature_2_title: '智能數據分析',
-            home_feature_2_desc: '整合大數據與深度學習模型，為您的決策提供精準的即時洞察，將數據轉化為商業智慧。',
+            home_feature_2_desc: '整合大數據與人工智慧模型，為您的決策提供精準的即時洞察，將數據轉化為商業智慧。',
             home_feature_3_title: '永續解決方案',
-            home_feature_3_desc: '將AI技術與綠色科技完美融合，打造高效能、低能耗的創新產品，引領產業邁向永續未來。',
-            home_cta_title: '準備好與 AIPEX 共同開創未來了嗎？',
-            home_cta_desc: '讓我們的AI技術為您的事業注入新活力，共同築建下一個創新里程碑。',
+            home_feature_3_desc: '提供減碳的方案，將AI技術與綠色科技完美融合，打造高效能、低能耗的創新產品，引領產業邁向永續未來。',
+            home_cta_title: '準備好與虎珀探索科技-AIPEX 開啟新的旅程，共同開創未來了嗎？',
+            home_cta_desc: '讓我們的專業為您的事業注入新活力，共同築建下一個創新里程碑。',
             home_cta_button: '立即聯繫我們',
 
             footer_copyright: '&copy; 2025 虎珀探索科技股份有限公司. 版權所有。',
