@@ -50,7 +50,7 @@ h3 { font-size: 1.8rem; }
     background-color: rgba(11, 19, 43, 0.8);
     padding: 1rem 5%;
     display: flex;
-    justify-content: space-between; /* 標誌和導航菜單之間有空間 */
+    justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -63,6 +63,11 @@ h3 { font-size: 1.8rem; }
 .logo-area {
     display: flex;
     align-items: center;
+    /* 這裡的 font-size, font-weight, color, text-transform 可以移除，因為 span 會覆蓋 */
+    /* font-size: 1.8rem; */
+    /* font-weight: bold; */
+    /* color: #5bf2fc; */
+    /* text-transform: uppercase; */
 }
 
 /* 解決 LOGO 文字看不清的問題 */
@@ -82,22 +87,14 @@ h3 { font-size: 1.8rem; }
 .logo {
     height: 40px;
     margin-right: 10px;
+    /* filter 應用在圖片本身，可以保持 */
     filter: drop-shadow(0 0 15px rgba(91, 242, 252, 0.9));
-}
-
-/* --- 修改開始 --- */
-/* 調整 Nav 的樣式，讓其內容水平排列 */
-nav {
-    display: flex; /* 讓 nav 內的連結和語言按鈕水平排列 */
-    align-items: center; /* 垂直居中對齊它們 */
-    /* 在桌面版，nav 佔據空間，並與 logo-area 平衡 */
-    flex-grow: 0; /* 預設不佔用額外空間 */
 }
 
 nav a {
     color: #E6FFFF;
     text-decoration: none;
-    margin-left: 25px; /* 保持連結間距 */
+    margin-left: 25px;
     font-weight: 500;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -109,16 +106,13 @@ nav a:hover {
 
 /* 語言切換按鈕樣式 - 亮青藍邊框和文字 */
 .lang-switch {
-    /* 調整 margin-left 與其他 nav a 保持一致 */
-    margin-left: 25px;
+    margin-left: 30px !important;
     padding: 0.5rem 0.8rem;
     border: 1px solid #5bf2fc;
     border-radius: 4px;
-    color: #5bf2fc !important; /* 使用 !important 確保覆蓋 nav a 的顏色 */
+    color: #5bf2fc !important;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
-    white-space: nowrap; /* 防止語言按鈕文字換行 */
-    text-shadow: none !important; /* 確保沒有額外的文字陰影 */
 }
 
 .lang-switch:hover {
@@ -126,8 +120,6 @@ nav a:hover {
     color: #E6FFFF !important;
     text-shadow: none !important;
 }
-/* --- 修改結束 --- */
-
 
 /* Hero 區塊 - 深藍漸變與亮青藍粒子 */
 .hero { /* index.html 的 hero */
@@ -466,6 +458,7 @@ section {
 .service-icon {
     margin-bottom: 1.5rem; /* Icon 與 H3 標題之間的間距 */
     display: block; /* 確保它獨立佔一行 */
+    /* 因為父級 benefit-item 已經用 align-items: center 居中，這裡不需要 text-align: center */
 }
 
 /* === 新增這裡：針對 service-icon 內部圖片的樣式 === */
@@ -499,6 +492,17 @@ section {
     left: 0;
     top: 0;
 }
+
+/* === 刪除或註釋掉這段舊的針對 h3 img 的樣式 === */
+/*
+.benefit-item h3 img {
+    width: 35px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px rgba(91, 242, 252, 0.6));
+}
+*/
 
 /* Contact Page Specific Styles - 保持亮青藍色 */
 
@@ -685,43 +689,18 @@ section {
     filter: grayscale(0%) drop-shadow(0 0 15px rgba(91, 242, 252, 0.9));
 }
 
-/* --- RWD 響應式設計 - 修改開始 --- */
+/* RWD 響應式設計 - 保持一致 */
 @media (max-width: 768px) {
     .header {
-        flex-direction: row; /* 在小螢幕下，logo-area 和 nav 保持在同一行 */
-        justify-content: space-between; /* logo 靠左，導覽靠右 */
+        flex-direction: column;
         padding: 1rem 3%;
-        /* 如果導覽項目非常多，可能需要 flex-wrap: wrap; */
-        /* 但為了保持在同一行，通常會盡量避免換行 */
     }
-    
-    /* nav 在小螢幕下應該與 logo-area 在同一行 */
     nav {
-        margin-top: 0; /* 移除原本在手機版加上的 margin-top */
-        display: flex; /* 確保 nav 內部元素繼續使用 flex */
-        align-items: center;
-        justify-content: flex-end; /* 讓導覽連結靠右對齊 */
-        flex-grow: 1; /* 讓 nav 盡可能佔據剩餘空間 */
-        /* 避免自動換行，強制保持在同一行 */
-        flex-wrap: nowrap;
-        overflow-x: auto; /* 如果內容太多，允許水平滾動 */
-        -webkit-overflow-scrolling: touch; /* 改善 iOS 上的滾動體驗 */
-        padding-bottom: 5px; /* 為可能出現的滾動條留出空間 */
+        margin-top: 1rem;
     }
-
     nav a {
-        margin: 0 10px; /* 稍微縮小連結間距 */
-        font-size: 0.95rem; /* 稍微縮小字體大小 */
-        white-space: nowrap; /* 防止連結文字換行 */
+        margin: 0 10px;
     }
-
-    /* 語言切換按鈕在手機上的調整 */
-    .lang-switch {
-        margin-left: 10px !important; /* 確保語言按鈕與其他連結間距一致 */
-        padding: 0.4rem 0.7rem; /* 調整內距 */
-        font-size: 0.9rem; /* 調整字體大小 */
-    }
-
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -758,6 +737,7 @@ section {
     .value-item, .service-item, .benefit-item {
         max-width: 450px;
         margin: 0 auto;
+        /* text-align: center; 已在 benefit-item 主規則中設置 */
     }
     .service-item ul {
         text-align: left;
@@ -801,14 +781,4 @@ section {
     h3 {
         font-size: 1.5rem;
     }
-    /* 在更小的螢幕上，進一步縮小導覽連結和語言按鈕的間距和字體 */
-    nav a, .lang-switch {
-        margin: 0 8px; /* 更小的左右間距 */
-        font-size: 0.8rem; /* 更小的字體 */
-        padding: 0.3rem 0.5rem; /* 更小的內距 */
-    }
-    .header {
-        padding: 0.8rem 2%; /* 稍微縮小 header 的左右內距 */
-    }
 }
-/* --- RWD 響應式設計 - 修改結束 --- */
