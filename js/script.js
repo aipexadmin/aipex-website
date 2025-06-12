@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Service Item 2
             service_title_2: 'User Experience & Interface Design (UX/UI)',
-            service_desc_2: 'Crafting intuitive and engaging digital and physical interfaces, ensuring seamless interactions and exceptional user satisfaction.',
+            service_desc_2: 'Designing intuitive and engaging digital and physical interfaces that deliver seamless interactions and elevate user satisfaction.',
 
             // Service Item 3
             service_title_3: 'Industrial Design & Product Realization',
-            service_3_desc: 'Transforming concepts into tangible products through expert industrial design, 3D modeling, rapid prototyping, optimized material selection, and robust production process consultation.',
+            service_3_desc: 'We integrate diverse AI-assisted technologies across every stage—from design and production to marketing—accelerating innovation, enhancing precision, and bringing ideas to life with greater speed and quality..',
 
             // Service Item 6
             service_title_6: 'AI Education & Application Training',
@@ -130,15 +130,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Service Item 1
             service_title_1: 'AI 驅動創新與策略洞察',
-            service_desc_1: '利用先進的 AI 演算法和機器學習，開發尖端解決方案，透過全面的市場研究和趨勢分析，生成突破性的產品和服務設計，推動創意和策略界限。',
+            service_desc_1: '利用先進的 AI 工具和大數據分析，開發尖端解決方案，透過全面的市場研究和趨勢分析，生成突破性的產品和服務設計，推動創意和策略界限。',
 
             // Service Item 2
             service_title_2: '用戶體驗與介面設計 (UX/UI)',
-            service_desc_2: '精心打造直觀且引人入勝的數位和實體介面，確保無縫互動和卓越的用戶滿意度。',
+            service_desc_2: '設計直觀且引人入勝的數位與實體介面，打造流暢互動體驗，全面提升用戶滿意度。',
 
             // Service Item 3
             service_title_3: '工業設計與產品實現',
-            service_3_desc: '透過專業的工業設計、3D 模型、快速原型製作、優化材料選擇以及穩健的生產流程諮詢，將概念轉化為實體產品。',
+            service_3_desc: '我們在設計、生產到行銷的每個階段導入多元 AI 輔助技術，加速創新流程、提升精準度，讓創意以更高品質與更快速度實現。',
 
             // Service Item 6
             service_title_6: 'AI 教育與應用培訓',
