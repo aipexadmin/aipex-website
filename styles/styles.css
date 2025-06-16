@@ -154,12 +154,12 @@ nav a:hover::after {
 /* 語言切換按鈕樣式 - 簡潔的科技感按鈕 */
 .lang-switch {
     margin-left: 25px !important;
-    padding: 0.4rem 0.6rem; /* 更寬的內距 */
-    border: 1px solid #5bf2fc;
+    padding: 0.5rem 0.8rem; /* 更寬的內距 */
+    border: 0.9px solid #5bf2fc;
     border-radius: 4px; /* 輕微圓角 */
     background-color: rgba(91, 242, 252, 0.05); /* 輕微的背景色 */
     color: #5bf2fc !important;
-    font-weight: bold;
+    font-weight: medium;
     text-transform: uppercase;
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 5px rgba(91, 242, 252, 0.3); /* 輕微發光 */
@@ -805,7 +805,7 @@ section {
         margin-left: 0 !important;
         margin-top: 1rem;
         min-width: 25px; /* 嘗試將最小寬度設定為更小的值 */
-        padding: 0.3rem 0.3rem; /* 也嘗試減少內部留白 */
+        padding: 0.5rem 0.6rem; /* 也嘗試減少內部留白 */
         font-size: 0.9rem; /* 確保文字不會太大 */
     }
     .hero h1 {
