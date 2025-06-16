@@ -34,15 +34,15 @@
                 <form class="contact-form">
                     <div class="form-group">
                         <label for="name" data-lang="contact_form_name_label"></label>
-                        <input type="text" id="name" name="name" required data-lang="contact_form_name_placeholder" placeholder="">
+                        <input type="text" id="name" name="name" required data-lang="contact_form_name_placeholder">
                     </div>
                     <div class="form-group">
                         <label for="email" data-lang="contact_form_email_label"></label>
-                        <input type="email" id="email" name="email" required data-lang="contact_form_email_placeholder" placeholder="">
+                        <input type="email" id="email" name="email" required data-lang="contact_form_email_placeholder">
                     </div>
                     <div class="form-group">
                         <label for="message" data-lang="contact_form_message_label"></label>
-                        <textarea id="message" name="message" rows="5" required data-lang="contact_form_message_placeholder" placeholder=""></textarea>
+                        <textarea id="message" name="message" rows="5" required data-lang="contact_form_message_placeholder"></textarea>
                     </div>
                     <button type="submit" class="cta-button" data-lang="contact_form_submit_button"></button>
                 </form>
@@ -54,7 +54,7 @@
                 <div class="contact-details">
                     <div class="detail-item">
                         <h3 data-lang="contact_info_email_label"></h3>
-                        <p data-lang="contact_info_email_value"></p>
+                        <p><a href="mailto:susan.wang@aipextec.com" data-lang="contact_info_email_value"></a></p>
                     </div>
                     <div class="detail-item">
                         <h3 data-lang="contact_info_phone_label"></h3>
@@ -69,8 +69,17 @@
         </div>
         
         <section class="social-media-links">
-            <h2 data-lang="social_media_title"></h2> 
+            <h2 data-lang="social_media_title"></h2>
             <div class="social-icons">
+                <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+                    <img src="public/images/social/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/yourpage" target="_blank" aria-label="Twitter">
+                    <img src="public/images/social/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://linkedin.com/company/yourcompany" target="_blank" aria-label="LinkedIn">
+                    <img src="public/images/social/linkedin.png" alt="LinkedIn">
+                </a>
                 </div>
         </section>
     </main>
