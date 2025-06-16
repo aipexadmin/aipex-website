@@ -40,27 +40,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Service Item 2
             service_title_2: 'User Experience & Interface Design (UX/UI)',
-            service_desc_2: 'Designing intuitive and engaging digital and physical interfaces that deliver seamless interactions and elevate user satisfaction.',
+            service_desc_2: 'Crafting intuitive and engaging digital and physical interfaces, ensuring seamless interactions and exceptional user satisfaction.', // 補齊英文翻譯
 
             // Service Item 3
             service_title_3: 'Industrial Design & Product Realization',
-            service_3_desc: 'We integrate diverse AI-assisted technologies across every stage—from design and production to marketing—accelerating innovation, enhancing precision, and bringing ideas to life with greater speed and quality..',
+            service_3_desc: 'Transforming concepts into tangible products through expert industrial design, 3D modeling, rapid prototyping, optimized material selection, and robust production process consultation.', // 補齊英文翻譯
 
-            // Service Item 6
+            // Service Item 6 (注意：HTML中是04.png對應這個服務，這裡順序與HTML保持一致)
             service_title_6: 'AI Education & Application Training',
             service_desc_6: 'Providing comprehensive training and workshops on utilizing AI tools to enhance daily life, accelerate work processes, and meet various personal and professional needs.',
 
-            // Service Item 4
+            // Service Item 4 (注意：HTML中是05.png對應這個服務，這裡順序與HTML保持一致)
             service_title_4: 'Brand & Identity Development',
-            service_desc_4: 'Building a comprehensive brand identity and strategy that enhances market presence, fosters recognition, and resonates with target audiences.',
+            service_desc_4: 'Building a comprehensive brand identity and strategy that enhances market presence, fosters recognition, and resonates with target audiences.', // 補齊英文翻譯
 
-            // Service Item 5
+            // Service Item 5 (注意：HTML中是06.png對應這個服務，這裡順序與HTML保持一致)
             service_title_5: 'Sustainable Design Consulting',
-            service_desc_5: 'Offering specialized consulting to integrate environmental and sustainability principles into product design and development, ensuring eco-conscious and responsible innovation.',
+            service_desc_5: 'Offering specialized consulting to integrate environmental and sustainability principles into product design and development, ensuring eco-conscious and responsible innovation.', // 補齊英文翻譯
 
             // Contact Page specific translations
             contact_hero_title: 'Get in Touch',
-            contact_hero_subtitle: 'We\'d love to hear from you. Fill out the form below or reach out directly.', // 將 tagline 改為 subtitle
+            contact_hero_subtitle: 'We\'d love to hear from you. Fill out the form below or reach out directly.',
             contact_form_title: 'Send Us a Message',
             contact_form_name_label: 'Name:',
             contact_form_name_placeholder: 'Your Name',
@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_form_message_label: 'Message:',
             contact_form_message_placeholder: 'Your message here...',
             contact_form_submit_button: 'Send Message',
-            contact_form_note: 'We will reply to you as soon as possible.', // 新增
+            contact_form_note: 'We will reply to you as soon as possible.',
             contact_info_title: 'Our Contact Information',
-            contact_info_email_label: 'Email:', // 新增
-            contact_info_email_value: 'susan.wang@aipextec.com', // 使用你提供的正確資訊
-            contact_info_phone_label: 'Phone:', // 新增
-            contact_info_phone_value: '+886-2-27535556', // 使用你提供的正確資訊
-            contact_info_address_label: 'Address:', // 新增
-            contact_info_address_value: '5F.-2, No.123, Sec. 4, Bade Rd., Songshan Dist., Taipei City 105, Taiwan (R.O.C.)', // 使用你提供的正確資訊
-            social_media_title: 'Let`s Spark Innovation Together!',
+            contact_info_email_label: 'Email:',
+            contact_info_email_value: 'susan.wang@aipextec.com',
+            contact_info_phone_label: 'Phone:',
+            contact_info_phone_value: '+886-2-27535556',
+            contact_info_address_label: 'Address:',
+            contact_info_address_value: '5F.-2, No.123, Sec. 4, Bade Rd., Songshan Dist., Taipei City 105, Taiwan (R.O.C.)',
+            social_media_title: 'Let\'s Spark Innovation Together!',
 
             // Index Page specific translations
             home_hero_title: 'Aurora Innovation Pioneer Exploration',
@@ -134,11 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Service Item 2
             service_title_2: '用戶體驗與介面設計 (UX/UI)',
-            service_desc_2: '設計直觀且引人入勝的數位與實體介面，打造流暢互動體驗，全面提升用戶滿意度。',
+            service_desc_2: '設計直觀且引人入勝的數位與實體介面，打造流暢互動體驗，全面提升用戶滿意度。', // 補齊中文翻譯
 
             // Service Item 3
             service_title_3: '工業設計與產品實現',
-            service_3_desc: '我們在設計、生產到行銷的每個階段導入多元 AI 輔助技術，加速創新流程、提升精準度，讓創意以更高品質與更快速度實現。',
+            service_3_desc: '我們在設計、生產到行銷的每個階段導入多元 AI 輔助技術，加速創新流程、提升精準度，讓創意以更高品質與更快速度實現。', // 補齊中文翻譯
 
             // Service Item 6
             service_title_6: 'AI 教育與應用培訓',
@@ -146,11 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Service Item 4
             service_title_4: '品牌與形象發展',
-            service_desc_4: '建立全面的品牌識別與策略，提升市場能見度，培養品牌認知，並與目標受眾產生共鳴。',
+            service_desc_4: '建立全面的品牌識別與策略，提升市場能見度，培養品牌認知，並與目標受眾產生共鳴。', // 補齊中文翻譯
 
             // Service Item 5
             service_title_5: '永續性設計顧問',
-            service_desc_5: '提供專業顧問服務，將環境與永續原則整合到產品設計與開發中，確保具備環保意識與負責任的創新。',
+            service_desc_5: '提供專業顧問服務，將環境與永續原則整合到產品設計與開發中，確保具備環保意識與負責任的創新。', // 補齊中文翻譯
 
             // Contact Page specific translations
             contact_hero_title: '聯絡我們',
@@ -163,14 +163,14 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_form_message_label: '訊息：',
             contact_form_message_placeholder: '您的訊息...',
             contact_form_submit_button: '發送訊息',
-            contact_form_note: '我們會盡快回覆您。', // 新增
+            contact_form_note: '我們會盡快回覆您。',
             contact_info_title: '我們的聯絡資訊',
-            contact_info_email_label: '電子郵件:', // 新增
-            contact_info_email_value: 'susan.wang@aipextec.com', // 使用你提供的正確資訊
-            contact_info_phone_label: '電話:', // 新增
-            contact_info_phone_value: '+886-2-27535556', // 使用你提供的正確資訊
-            contact_info_address_label: '地址:', // 新增
-            contact_info_address_value: '105台北市松山區八德路4段123號5F-2', // 使用你提供的正確資訊
+            contact_info_email_label: '電子郵件:',
+            contact_info_email_value: 'susan.wang@aipextec.com',
+            contact_info_phone_label: '電話:',
+            contact_info_phone_value: '+886-2-27535556',
+            contact_info_address_label: '地址:',
+            contact_info_address_value: '105台北市松山區八德路4段123號5F-2',
             social_media_title: '讓我們一起激發創新！',
 
             // Index Page specific translations
