@@ -804,7 +804,9 @@ section {
     .lang-switch {
         margin-left: 0 !important;
         margin-top: 1rem;
-        min-width: 30px; /* 小螢幕下可以稍微小一點 */
+        min-width: 40px; /* 嘗試將最小寬度設定為更小的值 */
+        padding: 0.3rem 0.6rem; /* 也嘗試減少內部留白 */
+        font-size: 0.9rem; /* 確保文字不會太大 */
     }
     .hero h1 {
         font-size: 2.8rem; /* 小螢幕標題調整 */
