@@ -20,6 +20,37 @@
     font-style: normal;
 }
 
+/* Base64 SVG 紋理定義 */
+/* 抽象電路板紋理 - 適用於 Hero 區塊 */
+/* 更密的線條，稍微不透明 */
+.circuit-board-texture {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzUiIGhlaWdodD0iNzUiIHZpZXdCb3g9IjAgMCA3NSA3NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSI3NSIgaGVpZ2h0PSI3NSIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGNpcmNsZSBjeD0iMTUuMzkzIiBjeT0iMS45NzMiIHI9IjAuNzUiIGZpbGw9IiM1YjUyZmMxNyIvPgogICAgPGNpcmNsZSBjeD0iNzQuMzA4IiBjeT0iNzMuNDYyIiByPSIwLjc1IiBmaWxsPSIjNWI1MmZjMTciLz4KICAgIDxjaXJjbGUgY3g9IjIuNTA0IiBjeT0iNzMuNzI2IiByPSIwLjc1IiBmaWxsPSIjNWI1MmZjMTciLz4KICAgIDxjaXJjbGUgY3g9IjYwLjkzNyIgY3k9IjMuNjQxIiByPSIwLjc1IiBmaWxsPSIjNWI1MmZjMTciLz4KICAgIDxsaW5lIHgxPSIxMy41MjUiIHkxPSI2LjUxMSIgeDI9IjEyLjcwNyIgeTI9IjYzLjY5MiIgc3Ryb2tlPSIjNWI1MmZjMDgiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC42Ii8+CiAgICA8bGluZSB4MT0iMTYuMjciIHkxPSIxLjkwMyIgeDI9IjI0LjcwNyIgeTI9IjEwLjQ1MiIgc3Ryb2tlPSIjNWI1MmZjMDgiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC42Ii8+CiAgICA8bGluZSB4MT0iMi4yMTgiIHkxPSI2OC43NzUiIHgyPSI3MC4xMDUiIHkyPSI2NC43MTIiIHN0cm9rZT0iIzVlNzlhZDA4IiBzdHJva2Utd2lkdGg9IjAuNiIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIvPgogICAgPGxpbmUgeDE9IjcyLjM5MSIgeTE9IjY5LjAwNCIgeDI9IjUuODkyIiB5Mj0iNjEuMDI2IiBzdHJva2U9IiM1ZTc5YWQwOCIgc3Ryb2tlLXdpZHRoPSIwLjYiIHN0cm9rZS1vcGFjaXR5PSIwLjUiLz4KICAgIDxsaW5lIHgxPSI2Mi4xODUiIHkxPSI3LjA3NiIgeDI9IjcuOTI2IiB5Mj0iNTcuODQ5IiBzdHJva2U9IiM1ZTc5YWQwOCIgc3Ryb2tlLXdpZHRoPSIwLjYiIHN0cm9rZS1vcGFjaXR5PSIwLjUiLz4KICAgIDxsaW5lIHgxPSIxMi4wNDEiIHkxPSI1LjYxMyIgeDI9IjY4LjYzMiIgeTI9IjYyLjYzMiIgc3Ryb2tlPSIjNWI1MmZjMDgiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC42Ii8+CiAgICA8bGluZSB4MT0iNjEuNzA3IiB5MT0iNy45MjYiIHgyPSI2OC42OTMiIHkyPSI2OS40ODUiIHN0cm9rZT0iIzVlNzlhZDA4IiBzdHJva2Utd2lkdGg9IjAuNiIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSIxLjcwNyAzNi42MTcgMTQuNzA3IDY4LjYxNyA2Ni4yMDcgMzYuNjE3IDQ2LjQ3IDYuNDE3IiBmaWxsPSJub25lIiBzdHJva2U9IiM1Zjc5YWQwOCIgc3Ryb2tlLXdpZHRoPSIwLjciIHN0cm9rZS1vcGFjaXR5PSIwLjUiLz4KPC9zdmc+");
+    background-size: 75px 75px; /* 控制紋理大小 */
+    background-repeat: repeat;
+    background-blend-mode: overlay; /* 混合模式，使紋理與背景融合 */
+    opacity: 0.15; /* 調整透明度，讓它不至於太搶眼 */
+}
+
+/* 幾何網格紋理 - 適用於一般內容區塊 */
+/* 更稀疏的點陣和線條，更透明 */
+.geometric-grid-texture {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI1MmZjMDQiIHN0cm9rZS13aWR0aD0iMC40Ij4KICAgICAgPHBhdGggZD0iTTUwIDBoMU0wIDUwSDEwMCIvPgogICAgICA8cGF0aCBkPSJNNTAgMEwxMDAgNTAgNTAgMTAwIDAgNTAgNTAgMCIvPgogICAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEuMiIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjI1IiBjeT0iNzUiIHI9IjAuNyIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iNzUiIGN5PSI3NSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgIDwvZz4KPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    opacity: 0.08; /* 更低的透明度 */
+}
+
+/* 微妙的噪音紋理 - 適用於所有元素，提供輕微材質感 */
+.noise-texture {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGZpbHRlciBpZD0ibm9pc2UiPjxmZXR1cmVOb2lzZSB0eXBlPSJmcmFjdGFsVHVyYnVsZW5jZSIgYmFzZUZyZXF1ZW5jeT0iMC44IiBudW0OctYXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDQiLz48L2ZpbHRlciYvPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiLz48L3N2Zz4=");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: screen; /* 篩選混合模式，使雜訊更柔和 */
+    opacity: 0.02; /* 極低的透明度，僅提供細微質感 */
+}
+
+
 /* 全局設定 - 亮青藍主題與細緻排版 */
 body {
     font-family: 'Exo 2', 'Montserrat', 'Gen Jyuu Gothic', sans-serif;
@@ -32,7 +63,19 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* 應用輕微噪音紋理到整個 body */
+    background-image: var(--body-bg-image, none); /* 使用 CSS 變數，後續會設定 */
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    background-blend-mode: screen;
+    opacity: 1; /* 這裡的 opacity 是針對 body 元素本身，紋理的透明度在定義中 */
 }
+
+/* 在 :root 中定義一個 CSS 變數來包含噪音紋理的 URL */
+:root {
+    --body-bg-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGZpbHRlciBpZD0ibm9pc2UiPjxmZXR1cmVOb2lzZSB0eXBlPSJmcmFjdGFsVHVyYnVsZW5jZSIgYmFzZUZyZXF1ZW5jeT0iMC44IiBudW0OctYXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDQiLz48L2ZpbHRlciYvPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiLz48L3N2Zz4=");
+}
+
 
 /* 標題樣式 - 更亮的青藍色，更銳利的光暈效果 */
 h1, h2, h3, h4, h5, h6 {
@@ -141,7 +184,7 @@ nav a:hover::after {
     box-shadow: 0 0 15px rgba(91, 242, 252, 0.6); /* 增強發光 */
 }
 
-/* Hero 區塊 - 更沉浸的背景與粒子動畫 */
+/* Hero 區塊 - 更沉浸的背景與粒子動畫，疊加電路板紋理 */
 .hero, .about-hero, .services-hero, .contact-hero {
     min-height: 50vh; /* 統一高度 */
     display: flex;
@@ -155,7 +198,16 @@ nav a:hover::after {
     padding: 4.5rem 5% 3rem;
     border-bottom: 1px solid rgba(91, 242, 252, 0.15); /* 柔和的底部線條 */
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6); /* 底部更深的陰影 */
+
+    /* 添加電路板紋理 */
+    background-image: linear-gradient(135deg, #070e1d, #141c2f),
+                      url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzUiIGhlaWdodD0iNzUiIHZpZXdCb3g9IjAgMCA3NSA3NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSI3NSIgaGVpZ2h0PSI3NSIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGNpcmNsZSBjeD0iMTUuMzkzIiBjeT0iMS45NzMiIHI9IjAuNzUiIGZpbGw9IiM1YjUyZjQxNyIvPgogICAgPGNpcmNsZSBjeD0iNzQuMzA4IiBjeT0iNzMuNDYyIiByPSIwLjc1IiBmaWxsPSIjNWI1MmZjMTciLz4KICAgIDxjaXJjbGUgY3g9IjIuNTA0IiBjeT0iNzMuNzI2IiByPSIwLjc1IiBmaWxsPSIjNWI1MmZjMTciLz4KICAgIDxjaXJjbGUgY3g9IjYwLjkzNyIgY3k9IjMuNjQxIiByPSIwLjc1IiBmaWxsPSIjNWI1MmZjMTciLz4KICAgIDxsaW5lIHgxPSIxMy41MjUiIHkxPSI2LjUxMSIgeDI9IjEyLjcwNyIgeTI9IjYzLjY5MiIgc3Ryb2tlPSIjNWI1MmZjMDgiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC42Ii8+CiAgICA8bGluZSB4MT0iMTYuMjciIHkxPSIxLjkwMyIgeDI9IjI0LjcwNyIgeTI9IjEwLjQ1MiIgc3Ryb2tlPSIjNWI1MmZjMDgiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC42Ii8+CiAgICA8bGluZSB4MT0iMi4yMTgiIHkxPSI2OC43NzUiIHgyPSI3MC4xMDUiIHkyPSI2NC43MTIiIHN0cm9rZT0iIzVlNzlhZDA4IiBzdHJva2Utd2lkdGg9IjAuNiIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIvPgogICAgPGxpbmUgeDE9IjcyLjM5MSIgeTE9IjY5LjAwNCIgeDI9IjUuODkyIiB5Mj0iNjEuMDI2IiBzdHJva2U9IiM1ZTc5YWQwOCIgc3Ryb2tlLXdpZHRoPSIwLjYiIHN0cm9rZS1vcGFjaXR5PSIwLjUiLz4KICAgIDxsaW5lIHgxPSI2Mi4xODUiIHkxPSI3LjA3NiIgeDI9IjcuOTI2IiB5Mj0iNTcuODQ5IiBzdHJva2U9IiM1ZTc5YWQwOCIgc3Ryb2tlLXdpZHRoPSIwLjYiIHN0cm9rZS1vcGFjaXR5PSIwLjUiLz4KICAgIDxsaW5lIHgxPSIxMi4wNDEiIHkxPSI1LjYxMyIgeDI9IjY4LjYzMiIgeTI9IjYyLjYzMiIgc3Ryb2tlPSIjNWI1MmZjMDgiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utd2lkdGg9IjAuNiIgc3Ryb2tlLW9wYWNpdHk9IjAuNiIvPgogICAgPGxpbmUgeDE9IjYxLjcwNyIgeTE9IjcuOTI2IiB4Mj0iNjguNjkzIiB5Mj0iNjkuNDg1IiBzdHJva2U9IiM1ZTc5YWQwOCIgc3Ryb2tlLXdpZHRoPSIwLjYiIHN0cm9rZS1vcGFjaXR5PSIwLjUiLz4KICAgIDxwb2x5Z29uIHBvaW50cz0iMS43MDcgMzYuNjE3IDE0LjcwNyA2OC42MTcgNjYuMjA3IDM2LjYxNyA0Ni40NyA2LjQxNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI3OWFkMDgiIHN0cm9rZS13aWR0aD0iMC43IiBzdHJva2Utb3BhY2l0eT0iMC41Ii8+Cjwvc3ZnPg==");
+    background-size: auto, 75px 75px; /* 漸層是 auto, 電路板是 75px */
+    background-repeat: no-repeat, repeat; /* 漸層不重複, 電路板重複 */
+    background-position: center center, 0 0; /* 漸層居中, 電路板從左上角開始 */
+    background-blend-mode: normal, overlay; /* 漸層正常, 電路板疊加 */
 }
+
 
 /* 粒子動畫效果容器 - 更細膩的粒子 */
 .hero::before, .hero::after,
@@ -170,6 +222,7 @@ nav a:hover::after {
     height: 100%;
     background-repeat: repeat;
     pointer-events: none;
+    z-index: 1; /* 確保粒子在背景紋理之上，但在文字之下 */
 }
 
 /* 模擬遠處的星空 - 更細小的藍色點 */
@@ -303,17 +356,30 @@ nav a:hover::after {
     box-shadow: 0 0 25px rgba(91, 242, 252, 0.8); /* 強化邊框光暈 */
 }
 
-/* 各個內容區塊 - 簡潔的層次感 */
+/* 各個內容區塊 - 簡潔的層次感，疊加幾何網格紋理 */
 section {
     padding: 6rem 5%;
     text-align: center;
     position: relative;
     z-index: 1;
+    /* 添加幾何網格紋理 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI1MmZjMDQiIHN0cm9rZS13aWR0aD0iMC40Ij4KICAgICAgPHBhdGggZD0iTTUwIDBoMU0wIDUwSDEwMCIvPgogICAgICA8cGF0aCBkPSJNNTAgMEwxMDAgNTAgNTAgMTAwIDAgNTAgNTAgMCIvPgogICAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEuMiIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjI1IiBjeT0iNzUiIHI9IjAuNyIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iNzUiIGN5PSI3NSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgIDwvZz4KPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    background-color: #0B132B; /* 確保底色 */
+    opacity: 1; /* 這裡的 opacity 是針對 section 元素本身，紋理的透明度在定義中 */
 }
 
+/* 確保 features-overview 保持其背景色 */
 .features-overview {
-    background: #1C2541; /* 第二層深藍 */
+    background-color: #1C2541; /* 第二層深藍，覆蓋 section 的底色 */
     border-bottom: 1px solid rgba(91, 242, 252, 0.1);
+    /* 這裡不再重複添加紋理，因為 section 已經有了。如果需要不同紋理，則在這裡覆蓋 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI1MmZjMDQiIHN0cm9rZS13aWR0aD0iMC40Ij4KICAgICAgPHBhdGggZD0iTTUwIDBoMU0wIDUwSDEwMCIvPgogICAgICA8cGF0aCBkPSJNNTAgMEwxMDAgNTAgNTAgMTAwIDAgNTAgNTAgMCIvPgogICAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEuMiIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjI1IiBjeT0iNzUiIHI9IjAuNyIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iNzUiIGN5PSI3NSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgIDwvZz4KPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
 }
 
 .features-overview h2 {
@@ -368,6 +434,13 @@ section {
 .call-to-action {
     background: linear-gradient(45deg, #0B132B, #1C2541);
     padding: 5rem 5%;
+    /* 這裡也可以添加幾何紋理，或者保持簡單 */
+    background-image: linear-gradient(45deg, #0B132B, #1C2541),
+                      url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI1MmZjMDQiIHN0cm9rZS13aWR0aD0iMC40Ij4KICAgICAgPHBhdGggZD0iTTUwIDBoMU0wIDUwSDEwMCIvPgogICAgICA8cGF0aCBkPSJNNTAgMEwxMDAgNTAgNTAgMTAwIDAgNTAgNTAgMCIvPgogICAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEuMiIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjI1IiBjY2k9Ijc1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9Ijc1IiBjeT0iNzUiIHI9IjAuNyIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICA8L2c+Cjwvc3ZnPg==");
+    background-size: auto, 100px 100px;
+    background-repeat: no-repeat, repeat;
+    background-position: center center, 0 0;
+    background-blend-mode: normal, overlay;
 }
 
 .call-to-action h2 {
@@ -383,7 +456,7 @@ section {
     font-weight: 300;
 }
 
-/* Footer - 簡潔明瞭 */
+/* Footer - 簡潔明瞭，疊加幾何網格紋理 */
 .footer {
     background-color: #080F20;
     color: #C0FFFF; /* 稍微柔和的文字顏色 */
@@ -391,6 +464,11 @@ section {
     padding: 2rem 5%;
     font-size: 0.9rem;
     border-top: 1px solid rgba(91, 242, 252, 0.1); /* 柔和的邊線 */
+    /* 添加幾何網格紋理 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI1MmZjMDQiIHN0cm9rZS13aWR0aD0iMC40Ij4KICAgICAgPHBhdGggZD0iTTUwIDBoMU0wIDUwSDEwMCIvPgogICAgICA8cGF0aCBkPSJNNTAgMEwxMDAgNTAgNTAgMTAwIDAgNTAgNTAgMCIvPgogICAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEuMiIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjI1IiBjY2k9Ijc1IiByPSIwLjciIGfiZWxsPSIjNTZiMmZjMDIiLz4KICAgICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgPC9nPgogPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
 }
 
 /* About Page Specific Styles */
@@ -406,12 +484,17 @@ section {
     color: #E6FFFF;
 }
 
-/* Our Story / Service Offerings Sections - 精緻的內容塊 */
+/* Our Story / Service Offerings Sections - 精緻的內容塊，疊加幾何網格紋理 */
 .our-story, .service-offerings, .our-values, .social-media-links { /* 包含 our-values */
     padding: 6rem 5%;
     text-align: center;
     background-color: #0B132B; /* 內容區塊背景色 */
     border-bottom: 1px solid rgba(91, 242, 252, 0.08); /* 更輕的底部線條 */
+    /* 添加幾何網格紋理 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI1MmZjMDQiIHN0cm9rZS13aWR0aD0iMC40Ij4KICAgICAgPHBhdGggZD0iTTUwIDBoMU0wIDUwSDEwMCIvPgogICAgICA8cGF0aCBkPSJNNTAgMEwxMDAgNTAgNTAgMTAwIDAgNTAgNTAgMCIvPgogICAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEuMiIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjI1IiBjY2k9Ijc1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9Ijc1IiBjeT0iNzUiIHI9IjAuNyIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICA8L2c+CiA8L3N2Zz4=");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
 }
 
 .story-content {
@@ -523,7 +606,7 @@ section {
     top: 0;
 }
 
-/* Contact Page Specific Styles - 更簡潔的表單佈局 */
+/* Contact Page Specific Styles - 更簡潔的表單佈局，疊加幾何網格紋理 */
 .contact-sections-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -533,6 +616,11 @@ section {
     padding: 6rem 5%;
     background-color: #0B132B;
     border-bottom: 1px solid rgba(91, 242, 252, 0.08);
+    /* 添加幾何網格紋理 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI1MmZjMDQiIHN0cm9rZS13aWR0aD0iMC40Ij4KICAgICAgPHBhdGggZD0iTTUwIDBoMU10MDUwSDEwMCIvPgogICAgICA8cGF0aCBkPSJNNTAgMEwxMDAgNTAgNTAgMTAwIDAgNTAgNTAgMCIvPgogICAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEuMiIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjI1IiBjY2k9Ijc1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9Ijc1IiBjeT0iNzUiIHI9IjAuNyIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICA8L2c+CiA8L3N2Zz4=");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
 }
 
 .contact-form-container {
@@ -674,16 +762,16 @@ section {
     text-align: center;
 }
 
-/* Social Media Links - 精緻的圖標呈現 */
+/* Social Media Links - 精緻的圖標呈現，疊加幾何網格紋理 */
 .social-media-links {
     padding: 4rem 5%;
     background-color: #080F20;
     border-top: 1px solid rgba(91, 242, 252, 0.1);
-}
-
-.social-media-links h2 {
-    margin-bottom: 2rem;
-    color: #5bf2fc;
+    /* 添加幾何網格紋理 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI1MmZjMDQiIHN0cm9rZS13aWR0aD0iMC40Ij4KICAgICAgPHBhdGggZD0iTTUwIDBoMU0wIDUwSDEwMCIvPgogICAgICA8cGF0aCBkPSJNNTAgMEwxMDAgNTAgNTAgMTAwIDAgNTAgNTAgMCIvPgogICAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEuMiIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICAgICAgPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMC43IiBmaWxsPSIjNTZiMmZjMDIiLz4KICAgICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9IjI1IiBjY2k9Ijc1IiByPSIwLjciIGZpbGw9IiM1NmIyZjkwMiIvPgogICAgICAgIDxjaXJjbGUgY3g9Ijc1IiBjeT0iNzUiIHI9IjAuNyIgZmlsbD0iIzU2YjJmYzAyIi8+CiAgICA8L2c+CiA8L3N2Zz4=");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
 }
 
 .social-icons {
