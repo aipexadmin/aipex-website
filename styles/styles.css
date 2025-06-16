@@ -784,37 +784,54 @@ section {
 /* RWD 響應式設計 - 優化小螢幕體驗 */
 @media (max-width: 768px) {
     .header {
+        /* 保持 .header 的 column 佈局，因為 nav 內部會處理並排 */
         flex-direction: column;
         padding: 1rem 3%;
+        /* 由於 .lang-switch 現在在 nav 內部，
+           這裡的 justify-content 和 align-items 主要影響 logo 和 nav 區域的垂直佈局 */
+        justify-content: center; /* 讓內容在 header 內部垂直居中 */
+        align-items: center; /* 讓內容在 header 內部水平居中 */
     }
+
+    .logo-area {
+        margin-bottom: 1rem; /* 確保 logo 區域和下方導航有適當間距 */
+    }
+
     nav {
-        margin-top: 1rem;
+        margin-top: 1rem; /* 保持這個，讓導航區塊與上方 logo 有間距 */
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: wrap; /* 允許連結換行 */
+        justify-content: center; /* 讓所有導航連結包括語言切換鈕在 nav 內部居中 */
+        align-items: center; /* 垂直居中對齊 nav 內的項目 */
+        width: 100%; /* 讓 nav 佔據可用寬度 */
     }
     nav a {
-        margin: 0 8px;
+        margin: 0 6px; /* 稍微減少導航連結間距，給語言切換鈕更多空間 */
         font-size: 0.95rem;
+        white-space: nowrap; /* 防止連結文字換行，確保並排 */
+        flex-shrink: 0; /* 防止連結被壓縮 */
     }
     nav a::after {
         height: 1px; /* 小螢幕下下劃線細一點 */
         bottom: -3px;
     }
-    /* 語言切換按鈕樣式調整 */
+
+    /* 語言切換按鈕樣式 - 關鍵調整 */
     .lang-switch {
-        margin-left: 0 !important; /* 手機版通常不需要左邊距 */
-        margin-top: 0.5rem; /* 稍微減少與上方元素的間距，如果希望更緊湊 */
-        /* 以下是調整按鈕大小的關鍵 */
-        min-width: unset; /* 取消最小寬度限制，讓寬度完全由內容決定 */
-        width: auto; /* 確保寬度自適應內容 */
-        padding: 0.3rem 0.6rem; /* 進一步縮小內距：垂直0.3rem，水平0.6rem */
+        /* 由於它在 nav 內部，所以 margin-left 可以設為 auto，將其推到右邊
+           或保持 small margin-left 以配合 nav a 的間距 */
+        margin-left: 10px !important; /* 與前一個連結保持距離 */
+        margin-top: 0; /* 確保在同一行，沒有多餘的垂直間距 */
+        min-width: unset; /* 取消最小寬度限制 */
+        width: auto; /* 寬度由內容決定 */
+        padding: 0.3rem 0.6rem; /* 進一步縮小內距 */
         font-size: 0.8rem; /* 減小字體大小 */
         display: inline-flex; /* 確保能與其他文字並排 */
         vertical-align: middle; /* 垂直對齊文字 */
-        /* 可以考慮將邊框再細一點 */
-        border: 0.7px solid #5bf2fc; /* 稍微減小邊框粗細 */
+        border: 0.7px solid #5bf2fc; /* 邊框可以再細一點 */
+        flex-shrink: 0; /* 防止按鈕被壓縮 */
     }
+
     .hero h1 {
         font-size: 2.8rem; /* 小螢幕標題調整 */
     }
