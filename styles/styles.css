@@ -163,9 +163,6 @@ nav a:hover::after {
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0 0 5px rgba(91, 242, 252, 0.3); /* 輕微發光 */
 }
 
