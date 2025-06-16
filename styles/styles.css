@@ -155,7 +155,7 @@ nav a:hover::after {
 .lang-switch {
     margin-left: 30px !important;
     padding: 0.4rem 0.8rem; /* 更寬的內距 */
-    min-width: 60px; /* 最小寬度，避免內容過短 */
+    min-width: 25px; /* 最小寬度，避免內容過短 */
     border: 1px solid #5bf2fc;
     border-radius: 5px; /* 輕微圓角 */
     background-color: rgba(91, 242, 252, 0.05); /* 輕微的背景色 */
