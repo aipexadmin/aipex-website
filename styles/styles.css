@@ -801,12 +801,19 @@ section {
         height: 1px; /* 小螢幕下下劃線細一點 */
         bottom: -3px;
     }
+    /* 語言切換按鈕樣式調整 */
     .lang-switch {
-        margin-left: 0 !important;
-        margin-top: 1rem;
-        min-width: 25px; /* 嘗試將最小寬度設定為更小的值 */
-        padding: 0.5rem 0.6rem; /* 也嘗試減少內部留白 */
-        font-size: 0.9rem; /* 確保文字不會太大 */
+        margin-left: 0 !important; /* 手機版通常不需要左邊距 */
+        margin-top: 0.5rem; /* 稍微減少與上方元素的間距，如果希望更緊湊 */
+        /* 以下是調整按鈕大小的關鍵 */
+        min-width: unset; /* 取消最小寬度限制，讓寬度完全由內容決定 */
+        width: auto; /* 確保寬度自適應內容 */
+        padding: 0.3rem 0.6rem; /* 進一步縮小內距：垂直0.3rem，水平0.6rem */
+        font-size: 0.8rem; /* 減小字體大小 */
+        display: inline-flex; /* 確保能與其他文字並排 */
+        vertical-align: middle; /* 垂直對齊文字 */
+        /* 可以考慮將邊框再細一點 */
+        border: 0.7px solid #5bf2fc; /* 稍微減小邊框粗細 */
     }
     .hero h1 {
         font-size: 2.8rem; /* 小螢幕標題調整 */
@@ -844,11 +851,6 @@ section {
     .service-item ul {
         text-align: left;
         max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .service-icon img {
-        width: 55px; /* 小螢幕下 icon 尺寸調整 */
     }
     .contact-sections-wrapper {
         flex-direction: column;
