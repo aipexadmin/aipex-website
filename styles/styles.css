@@ -63,11 +63,6 @@ h3 { font-size: 1.8rem; }
 .logo-area {
     display: flex;
     align-items: center;
-    /* 這裡的 font-size, font-weight, color, text-transform 可以移除，因為 span 會覆蓋 */
-    /* font-size: 1.8rem; */
-    /* font-weight: bold; */
-    /* color: #5bf2fc; */
-    /* text-transform: uppercase; */
 }
 
 /* 解決 LOGO 文字看不清的問題 */
@@ -105,23 +100,25 @@ nav a:hover {
 }
 
 /* 語言切換按鈕樣式 - 亮青藍邊框和文字 */
-
 .lang-switch {
-    margin-left: 25px !important;
-    padding: 0.4rem 0.4rem;
-    width: 50px;            /* 設定固定寬度 */
-    height: 50px;           /* 設定固定高度，使寬高相同變為正方形 */
+    margin-left: 25px !important;
+    padding: 0.4rem 0.4rem;
+    width: 50px;           /* 設定固定寬度 */
+    height: 50px;          /* 設定固定高度，使寬高相同變為正方形 */
     border: 1px solid #5bf2fc;
-    border-radius: 4px;
-    color: #5bf2fc !important;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+    color: #5bf2fc !important;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex; /* 使用 flexbox 讓內容居中 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
 }
 
 .lang-switch:hover {
-    background-color: rgba(91, 242, 252, 0.15);
-    color: #E6FFFF !important;
-    text-shadow: none !important;
+    background-color: rgba(91, 242, 252, 0.15);
+    color: #E6FFFF !important;
+    text-shadow: none !important;
 }
 
 /* Hero 區塊 - 深藍漸變與亮青藍粒子 */
@@ -337,7 +334,7 @@ section {
 }
 
 .feature-item {
-    background-color: #0B132B;
+    background-color: #0B132B; /* 調整為更深的背景 */
     padding: 2.5rem;
     border-radius: 10px;
     border: 1px solid rgba(91, 242, 252, 0.2);
@@ -421,7 +418,7 @@ section {
 
 /* === 修改這裡：針對 benefit-item 的新樣式 === */
 .benefit-item {
-    background-color: #1C2541;
+    background-color: #1C2541; /* 統一卡片背景色 */
     padding: 2.5rem;
     border-radius: 10px;
     border: 1px solid rgba(91, 242, 252, 0.2);
@@ -436,7 +433,7 @@ section {
 }
 
 .value-item, .service-item { /* 其他項目保持原來的樣式 */
-    background-color: #1C2541;
+    background-color: #1C2541; /* 統一卡片背景色 */
     padding: 2.5rem;
     border-radius: 10px;
     border: 1px solid rgba(91, 242, 252, 0.2);
@@ -466,7 +463,7 @@ section {
 
 /* === 新增這裡：針對 service-icon 內部圖片的樣式 === */
 .service-icon img {
-    width: 50px; /* 您想要的 icon 尺寸 */
+    width: 60px; /* 您想要的 icon 尺寸，略微調大以更突出 */
     height: auto; /* 保持圖片比例 */
     display: block; /* 使圖片成為塊級元素 */
     margin: 0 auto; /* 水平居中圖片 */
@@ -495,17 +492,6 @@ section {
     left: 0;
     top: 0;
 }
-
-/* === 刪除或註釋掉這段舊的針對 h3 img 的樣式 === */
-/*
-.benefit-item h3 img {
-    width: 35px;
-    height: auto;
-    vertical-align: middle;
-    margin-right: 10px;
-    filter: drop-shadow(0 0 5px rgba(91, 242, 252, 0.6));
-}
-*/
 
 /* Contact Page Specific Styles - 保持亮青藍色 */
 
@@ -577,6 +563,10 @@ section {
 .contact-details {
     margin-top: 2rem;
     text-align: left; /* 確保聯絡細節文字左對齊 */
+}
+
+.detail-item {
+    margin-bottom: 1.5rem; /* 增加每個聯絡細節項目間距 */
 }
 
 .detail-item h3 {
@@ -700,9 +690,17 @@ section {
     }
     nav {
         margin-top: 1rem;
+        display: flex; /* 讓導航連結在小螢幕下橫向排列 */
+        flex-wrap: wrap; /* 允許換行 */
+        justify-content: center; /* 居中對齊 */
     }
     nav a {
-        margin: 0 10px;
+        margin: 0 8px; /* 稍微縮小間距 */
+        font-size: 0.95rem; /* 稍微縮小字體 */
+    }
+    .lang-switch {
+        margin-left: 0 !important; /* 在小螢幕下移除左側 margin */
+        margin-top: 1rem; /* 放在單獨一行或下方 */
     }
     .hero h1 {
         font-size: 2.5rem;
@@ -740,7 +738,6 @@ section {
     .value-item, .service-item, .benefit-item {
         max-width: 450px;
         margin: 0 auto;
-        /* text-align: center; 已在 benefit-item 主規則中設置 */
     }
     .service-item ul {
         text-align: left;
@@ -765,6 +762,10 @@ section {
         max-width: 500px;
         margin: 0 auto 2rem;
     }
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -783,5 +784,9 @@ section {
     }
     h3 {
         font-size: 1.5rem;
+    }
+    nav a {
+        margin: 0 5px; /* 更小的間距 */
+        font-size: 0.9rem; /* 更小的字體 */
     }
 }
