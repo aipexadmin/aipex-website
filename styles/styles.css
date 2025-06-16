@@ -20,6 +20,917 @@
     font-style: normal;
 }
 
+/* Base64 SVG 紋理定義 */
+/* 抽象電路板紋理 - 適用於 Hero 區塊 (約 150px x 150px) */
+.circuit-board-texture {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNWJmNmZjIj48L3N0b3A+CiAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMzMwMDgyIj48L3N0b3A+CiAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICA8cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI3OWFkMTQiIHN0cm9rZS13aWR0aD0iMC42Ij4KICAgICAgPHBhdGggZD0iTTAgNzVMNzUgMCAxNTAgNzUgNzUgMTUwIDAgNzUiLz4KICAgICAgPHBhdGggZD0iTTc1IDBMMTUwIDc1IDc1IDE1MCAwIDc1IDc1IDBaTTc1IDc1bDMwLTMwTDEzNSA3NSA3NSAxMzUgNDUgNzUgNzUgNDUgNzUgNzUiLz4KICAgICAgPGNpcmNsZSBjeD0iNzUiIGN5PSI3NSIgcj0iMiIgZmlsbD0idXJsKCNhKSIvPgogICAgICA8Y2lyY2xlIGN4PSIxNS41IiBjeT0iMTUuNSIgcj0iMSIgZmlsbD0idXJsKCNhKSIvPgogICAgICA8Y2lyY2xlIGN4PSIxMzQuNSIgY3k9IjE1LjUiIHI9IjEiIGZpbGw9InVybCgjYSkiLz4KICAgICAgPGNpcmNsZSBjeD0iMTUuNSIgY3k9IjEzNC41IiByPSIxIiBmaWxsPSJ1cmwoI2EpIi8+CiAgICAgIDxjaXJjbGUgY3g9IjEzNC41IiBjeT0iMTM0LjUiIHI9IjEiIGZpbGw9InVybCgjYSkiLz4KICAgIDwvZz4KPC9zdmc+");
+    background-size: 150px 150px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    opacity: 0.15; /* 調整透明度 */
+}
+
+/* 抽象幾何網格紋理 - 適用於一般內容區塊 (約 100px x 100px) */
+.geometric-grid-texture {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTk3OWFkMDYiIHN0cm9rZS13aWR0aD0iMC4zIj4KICAgICAgPHBhdGggZD0iTTUwIDBMTAwIDUwIDUwIDEwMCAwIDUwIDUwIDBaIi8+CiAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgPC9nPgogPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    opacity: 0.08; /* 更低的透明度 */
+}
+
+/* 微妙的噪音紋理 - 全局材質感 (20px x 20px) */
+.noise-texture {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGZpbHRlciBpZD0ibm9pc2UiPjxmZXR1cmVOb2lzZSB0eXBlPSJmcmFjdGFsVHVyYnVsZW5jZSIgYmFzZUZyZXF1ZW5jeT0iMC44IiBudW0OctYXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDQiLz48L2ZpbHRlciYvPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiLz48L21vbm90eXBlLWZpbHRlciY+PC9zdmc+");
+    background-size: 20px 20px; /* 調整大小以讓顆粒感更細密 */
+    background-repeat: repeat;
+    background-blend-mode: screen; /* 篩選混合模式，使雜訊更柔和 */
+    opacity: 0.02; /* 極低的透明度，僅提供細微質感 */
+}
+
+/* 全局設定 - 亮青藍主題與細緻排版 */
+body {
+    font-family: 'Exo 2', 'Montserrat', 'Gen Jyuu Gothic', sans-serif;
+    background-color: #0B132B; /* 深藍背景 */
+    color: #E6FFFF; /* 主要文字顏色：非常淺的青藍色（接近白色） */
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* 應用輕微噪音紋理到整個 body */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGZpbHRlciBpZD0ibm9pc2UiPjxmZXR1cmVOb2lzZSB0eXBlPSJmcmFjdGFsVHVyYnVsZW5jZSIgYmFzZUZyZXF1ZW5jeT0iMC44IiBudW0OctYXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDQiLz48L2ZpbHRlciYvPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiLz48L21vbm90eXBlLWZpbHRlciY+PC9zdmc+");
+    background-repeat: repeat;
+    background-size: 20px 20px; /* 匹配 .noise-texture 的大小 */
+    background-blend-mode: screen;
+    opacity: 1; /* 這裡的 opacity 是針對 body 元素本身，紋理的透明度在定義中 */
+}
+
+
+/* 標題樣式 - 更亮的青藍色，更銳利的光暈效果 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo 2', 'Montserrat', 'Gen Jyuu Gothic', sans-serif;
+    color: #5bf2fc; /* 您指定的亮青藍色 */
+    text-shadow: 0 0 10px rgba(91, 242, 252, 0.7), /* 基礎光暈 */
+                 0 0 20px rgba(91, 242, 252, 0.5); /* 擴散光暈 */
+    font-weight: 700;
+    line-height: 1.2; /* 縮小行高，更緊湊專業 */
+}
+h1 { font-size: 3.8rem; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 1.8rem; }
+
+/* Header 導航列 - 更輕薄、有層次感的設計 */
+.header {
+    background-color: rgba(11, 19, 43, 0.7); /* 更透明一些 */
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(8px); /* 更強的模糊效果 */
+    -webkit-backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(91, 242, 252, 0.2); /* 更柔和的底部邊線 */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4); /* 輕微的立體感陰影 */
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area span {
+    font-family: 'Exo 2', 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #E6FFFF; /* 保持淺色 */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: none; /* 確保無文字陰影 */
+    -webkit-text-stroke: none; /* 確保無文字邊框 */
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 10px rgba(91, 242, 252, 0.8)); /* 柔和的發光 */
+}
+
+nav a {
+    color: #C0FFFF; /* 導航連結稍微暗一些，突出 hover 效果 */
+    text-decoration: none;
+    margin-left: 30px; /* 增加間距 */
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.2s ease; /* 新增 transform */
+    position: relative; /* 用於下劃線動畫 */
+}
+
+nav a::after { /* 導航下劃線動畫 */
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #5bf2fc;
+    transition: width 0.3s ease-out;
+}
+
+nav a:hover {
+    color: #5bf2fc;
+    text-shadow: 0 0 8px rgba(91, 242, 252, 0.7);
+    transform: translateY(-2px); /* 輕微上浮效果 */
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* 語言切換按鈕樣式 - 簡潔的科技感按鈕 */
+.lang-switch {
+    margin-left: 30px !important;
+    padding: 0.4rem 0.8rem; /* 更寬的內距 */
+    min-width: 60px; /* 最小寬度，避免內容過短 */
+    border: 1px solid #5bf2fc;
+    border-radius: 5px; /* 輕微圓角 */
+    background-color: rgba(91, 242, 252, 0.05); /* 輕微的背景色 */
+    color: #5bf2fc !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(91, 242, 252, 0.3); /* 輕微發光 */
+}
+
+.lang-switch:hover {
+    background-color: rgba(91, 242, 252, 0.15);
+    color: #E6FFFF !important;
+    text-shadow: none !important;
+    box-shadow: 0 0 15px rgba(91, 242, 252, 0.6); /* 增強發光 */
+}
+
+/* Hero 區塊 - 更沉浸的背景與粒子動畫，疊加電路板紋理 */
+.hero, .about-hero, .services-hero, .contact-hero {
+    min-height: 50vh; /* 統一高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #070e1d, #141c2f); /* 更深的藍色漸變 */
+    position: relative;
+    overflow: hidden;
+    padding: 4.5rem 5% 3rem;
+    border-bottom: 1px solid rgba(91, 242, 252, 0.15); /* 柔和的底部線條 */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6); /* 底部更深的陰影 */
+
+    /* 添加電路板紋理 */
+    background-image: linear-gradient(135deg, #070e1d, #141c2f),
+                      url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNWJmNmZjIj48L3N0b3A+CiAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMzMwMDgyIj48L3N0b3A+CiAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWI3OWFkMTQiIHN0cm9rZS13aWR0aD0iMC42Ij4KICAgICAgPHBhdGggZD0iTTAgNzVMNzUgMCAxNTAgNzUgNzUgMTUwIDAgNzUiLz4KICAgICAgPHBhdGggZD0iTTc1IDBMMTUwIDc1IDc1IDE1MCAwIDc1IDc1IDBaTTc1IDc1bDMwLTMwTDEzNSA3NSA3NSAxMzUgNDUgNzUgNzUgNDUgNzUgNzUiLz4KICAgICAgPGNpcmNsZSBjeD0iNzUiIGN5PSI3NSIgcj0iMiIgZmlsbD0idXJsKCNhIiIvPgogICAgICA8Y2lyY2xlIGN4PSIxNS41IiBjeT0iMTUuNSIgcj0iMSIgZmlsbD0idXJsKCNhIiIvPgogICAgICA8Y2lyY2xlIGN4PSIxMzQuNSIgY3k9IjE1LjUiIHI9IjEiIGZpbGw9InVybCgjYSkiLz4KICAgICAgPGNpcmNsZSBjeD0iMTUuNSIgY3k9IjEzNC41IiByPSIxIiBmaWxsPSJ1cmwoI2EpIi8+CiAgICAgIDxjaXJjbGUgY3g9IjEzNC41IiBjeT0iMTM0LjUiIHI9IjEiIGZpbGw9InVybCgjYSIvPgogICAgPC9nPgogPC9zdmc+");
+    background-size: auto, 150px 150px; /* 漸層是 auto, 電路板是 150px */
+    background-repeat: no-repeat, repeat; /* 漸層不重複, 電路板重複 */
+    background-position: center center, 0 0; /* 漸層居中, 電路板從左上角開始 */
+    background-blend-mode: normal, overlay; /* 漸層正常, 電路板疊加 */
+}
+
+
+/* 粒子動畫效果容器 - 更細膩的粒子 */
+.hero::before, .hero::after,
+.about-hero::before, .about-hero::after,
+.services-hero::before, .services-hero::after,
+.contact-hero::before, .contact-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    pointer-events: none;
+    z-index: 1; /* 確保粒子在背景紋理之上，但在文字之下 */
+}
+
+/* 模擬遠處的星空 - 更細小的藍色點 */
+.hero::before, .about-hero::before, .services-hero::before, .contact-hero::before {
+    background-image:
+        radial-gradient(circle, rgba(91, 242, 252, 0.6) 0.3px, transparent 0.3px),
+        radial-gradient(circle, rgba(120, 245, 255, 0.5) 0.5px, transparent 0.5px),
+        radial-gradient(circle, rgba(150, 248, 255, 0.4) 0.7px, transparent 0.7px);
+    background-size: 25px 25px, 40px 40px, 60px 60px; /* 更緊密的佈局 */
+    opacity: 0.6;
+    animation: moveStarsRandomBlue 250s linear infinite,
+                flickerStarsBlue 2.5s ease-in-out infinite alternate; /* 略快一點的閃爍 */
+}
+
+/* 模擬近處的星塵/數據流 - 更柔和的光點 */
+.hero::after, .about-hero::after, .services-hero::after, .contact-hero::after {
+    background-image:
+        radial-gradient(circle, rgba(91, 242, 252, 0.7) 1px, transparent 1px),
+        radial-gradient(circle, rgba(120, 245, 255, 0.6) 1.5px, transparent 1.5px),
+        radial-gradient(ellipse, rgba(150, 248, 255, 0.5) 2px, transparent 2px);
+    background-size: 70px 70px, 100px 100px, 130px 130px;
+    opacity: 0.3; /* 更低的透明度，更像背景 */
+    animation: moveDataFlowRandomBlue 180s linear infinite reverse,
+                glowStarsBlue 3s ease-in-out infinite alternate; /* 略快一點的光暈 */
+    filter: blur(0.3px); /* 更輕微的模糊 */
+}
+
+/* Keyframes 保持不變，因為它們是動畫行為 */
+@keyframes moveStarsRandomBlue {
+    0% { transform: translate(0, 0); }
+    15% { transform: translate(-50px, 100px); }
+    30% { transform: translate(-200px, -50px); }
+    45% { transform: translate(100px, -150px); }
+    60% { transform: translate(-250px, 250px); }
+    75% { transform: translate(50px, -300px); }
+    100% { transform: translate(-400px, -400px); }
+}
+
+@keyframes moveDataFlowRandomBlue {
+    0% { background-position: 0 0; }
+    10% { background-position: 50px 150px; }
+    20% { background-position: 200px -50px; }
+    30% { background-position: -100px 300px; }
+    40% { background-position: 300px 0px; }
+    50% { background-position: 500px 200px; }
+    60% { background-position: 150px -100px; }
+    70% { background-position: -50px 400px; }
+    80% { background-position: 450px 50px; }
+    90% { background-position: 250px 600px; }
+    100% { background-position: 700px 700px; }
+}
+
+@keyframes flickerStarsBlue {
+    0%, 100% { opacity: 0.7; }
+    20% { opacity: 1; }
+    40% { opacity: 0.6; }
+    60% { opacity: 0.9; }
+    80% { opacity: 0.4; }
+}
+
+@keyframes glowStarsBlue {
+    0%, 100% { opacity: 0.4; }
+    15% { opacity: 0.6; }
+    30% { opacity: 0.3; }
+    45% { opacity: 0.5; }
+    60% { opacity: 0.7; }
+    75% { opacity: 0.35; }
+    90% { opacity: 0.55; }
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+    position: relative;
+    max-width: 900px;
+    letter-spacing: 0.05em; /* 略微增加字間距 */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+    color: #E6FFFF;
+    z-index: 2;
+    position: relative;
+    font-weight: 300;
+    line-height: 1.5; /* 確保易讀性 */
+}
+
+/* 行動呼籲按鈕 - 更具科技感的漸變與陰影 */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #5bf2fc, #00c7e2); /* 更鮮明的漸變 */
+    color: #050d1e; /* 確保文字顏色對比度 */
+    padding: 1.1rem 3rem; /* 稍微大一點的按鈕 */
+    border-radius: 8px; /* 輕微圓角 */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 0 20px rgba(91, 242, 252, 0.8), /* 主光暈 */
+                0 0 35px rgba(91, 242, 252, 0.4); /* 擴散光暈 */
+    z-index: 2;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: none; /* 確保沒有邊框 */
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px) scale(1.02); /* 更明顯的上浮和輕微放大 */
+    box-shadow: 0 0 40px rgba(91, 242, 252, 1), /* 強化光暈 */
+                0 0 60px rgba(91, 242, 252, 0.6);
+    background: linear-gradient(45deg, #78f5ff, #1ae2ff); /* hover 時顏色更亮 */
+}
+
+.cta-button.secondary {
+    background: none;
+    border: 2px solid #5bf2fc;
+    color: #5bf2fc;
+    box-shadow: 0 0 10px rgba(91, 242, 252, 0.5); /* 輕微邊框光暈 */
+    padding: 1rem 2.8rem; /* 保持尺寸一致 */
+}
+
+.cta-button.secondary:hover {
+    background-color: rgba(91, 242, 252, 0.15); /* 更柔和的 hover 背景 */
+    color: #A0FFFF;
+    border-color: #A0FFFF;
+    box-shadow: 0 0 25px rgba(91, 242, 252, 0.8); /* 強化邊框光暈 */
+}
+
+/* 各個內容區塊 - 簡潔的層次感，疊加幾何網格紋理 */
+section {
+    padding: 6rem 5%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    /* 添加幾何網格紋理 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTk3OWFkMDYiIHN0cm9rZS13aWR0aD0iMC4zIj4KICAgICAgPHBhdGggZD0iTTUwIDBMTAwIDUwIDUwIDEwMCAwIDUwIDUwIDBaIi8+CiAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgPC9nPgogPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    background-color: #0B132B; /* 確保底色 */
+    opacity: 1; /* 這裡的 opacity 是針對 section 元素本身，紋理的透明度在定義中 */
+}
+
+/* 確保 features-overview 保持其背景色 */
+.features-overview {
+    background-color: #1C2541; /* 第二層深藍，覆蓋 section 的底色 */
+    border-bottom: 1px solid rgba(91, 242, 252, 0.1);
+    /* 這裡不再重複添加紋理，因為 section 已經有了。如果需要不同紋理，則在這裡覆蓋 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTk3OWFkMDYiIHN0cm9rZS13aWR0aD0iMC4zIj4KICAgICAgPHBhdGggZD0iTTUwIDBMTAwIDUwIDUwIDEwMCAwIDUwIDUwIDBaIi8+CiAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgPC9nPgogPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+}
+
+.features-overview h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #5bf2fc;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background-color: #0B132B; /* 最深背景色的卡片 */
+    padding: 2.5rem;
+    border-radius: 12px; /* 略大圓角 */
+    border: 1px solid rgba(91, 242, 252, 0.15); /* 柔和邊框 */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), /* 輕微的基礎陰影 */
+                0 0 10px rgba(91, 242, 252, 0.2); /* 輕微的發光邊框 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* 內部 flex 佈局 */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-item:hover {
+    transform: translateY(-12px) scale(1.01); /* 更明顯的浮動和輕微放大 */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), /* 強化陰影 */
+                0 0 30px rgba(91, 242, 252, 0.5); /* 強化發光 */
+}
+
+.feature-item h3 {
+    color: #5bf2fc;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.03em; /* 略微增加字間距 */
+}
+
+.feature-item p {
+    color: #E6FFFF;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 90%; /* 限制段落寬度，提高可讀性 */
+    margin: 0 auto;
+}
+
+.call-to-action {
+    background: linear-gradient(45deg, #0B132B, #1C2541);
+    padding: 5rem 5%;
+    /* 這裡也可以添加幾何紋理，或者保持簡單 */
+    background-image: linear-gradient(45deg, #0B132B, #1C2541),
+                      url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTk3OWFkMDYiIHN0cm9rZS13aWR0aD0iMC4zIj4KICAgICAgPHBhdGggZD0iTTUwIDBMTAwIDUwIDUwIDEwMCAwIDUwIDUwIDBaIi8+CiAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgPC9nPgogPC9zdmc+");
+    background-size: auto, 100px 100px;
+    background-repeat: no-repeat, repeat;
+    background-position: center center, 0 0;
+    background-blend-mode: normal, overlay;
+}
+
+.call-to-action h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #5bf2fc;
+}
+
+.call-to-action p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: #E6FFFF;
+    font-weight: 300;
+}
+
+/* Footer - 簡潔明瞭，疊加幾何網格紋理 */
+.footer {
+    background-color: #080F20;
+    color: #C0FFFF; /* 稍微柔和的文字顏色 */
+    text-align: center;
+    padding: 2rem 5%;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(91, 242, 252, 0.1); /* 柔和的邊線 */
+    /* 添加幾何網格紋理 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTk3OWFkMDYiIHN0cm9rZS13aWR0aD0iMC4zIj4KICAgICAgPHBhdGggZD0iTTUwIDBMTAwIDUwIDUwIDEwMCAwIDUwIDUwIDBaIi8+CiAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgPC9nPgogPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+}
+
+/* About Page Specific Styles */
+.about-hero h1, .services-hero h1, .contact-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #5bf2fc;
+}
+
+.about-hero .tagline, .services-hero .tagline, .contact-hero .tagline {
+    font-size: 1.3rem;
+    max-width: 800px;
+    color: #E6FFFF;
+}
+
+/* Our Story / Service Offerings Sections - 精緻的內容塊，疊加幾何網格紋理 */
+.our-story, .service-offerings, .our-values, .social-media-links { /* 包含 our-values */
+    padding: 6rem 5%;
+    text-align: center;
+    background-color: #0B132B; /* 內容區塊背景色 */
+    border-bottom: 1px solid rgba(91, 242, 252, 0.08); /* 更輕的底部線條 */
+    /* 添加幾何網格紋理 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTk3OWFkMDYiIHN0cm9rZS13aWR0aD0iMC4zIj4KICAgICAgPHBhdGggZD0iTTUwIDBMTAwIDUwIDUwIDEwMCAwIDUwIDUwIDBaIi8+CiAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgPC9nPgogPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+}
+
+.story-content {
+    max-width: 900px; /* 限制段落寬度以提高可讀性 */
+    margin: 0 auto;
+    text-align: left;
+    color: #E0FFFF; /* 故事內容文字色 */
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.story-content p {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+
+/* Values Grid / Service Grid / Benefits Grid - 卡片統一設計 */
+.values-grid, .service-grid, .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem; /* 保持間距 */
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+.value-item, .benefit-item { /* 統一卡片樣式 */
+    background-color: #1C2541; /* 較淺的深藍背景卡片 */
+    padding: 2.5rem;
+    border-radius: 12px; /* 統一圓角 */
+    border: 1px solid rgba(91, 242, 252, 0.15); /* 柔和邊框 */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3),
+                0 0 10px rgba(91, 242, 252, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* 確保內容垂直居中 */
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* 讓文字和標題居中 */
+}
+
+/* service-item 在 services.html 中有額外列表內容，因此保持左對齊 */
+.service-item {
+    background-color: #1C2541;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(91, 242, 252, 0.15);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3),
+                0 0 10px rgba(91, 242, 252, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* 保持文字左對齊 */
+}
+
+.value-item:hover, .service-item:hover, .benefit-item:hover {
+    transform: translateY(-12px) scale(1.01); /* 更明顯的浮動和輕微放大 */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(91, 242, 252, 0.5);
+}
+
+.value-item h3, .service-item h3, .benefit-item h3 {
+    color: #5bf2fc;
+    margin-bottom: 0.8rem;
+    font-size: 1.7rem; /* 稍微增大標題字體 */
+    letter-spacing: 0.02em;
+    margin-top: 0;
+}
+
+.value-item p, .benefit-item p { /* 居中的卡片段落 */
+    color: #E6FFFF;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 90%; /* 限制段落寬度 */
+    margin: 0 auto;
+}
+
+
+.service-icon {
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.service-icon img {
+    width: 65px; /* 略微增大 icon 尺寸 */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 25px rgba(91, 242, 252, 0.9)); /* 更強的發光效果 */
+}
+
+.service-item ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.service-item ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+    color: #E6FFFF;
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+.service-item ul li::before {
+    content: '•';
+    color: #5bf2fc;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Contact Page Specific Styles - 更簡潔的表單佈局，疊加幾何網格紋理 */
+.contact-sections-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4%; /* 略微縮小間距 */
+    padding: 6rem 5%;
+    background-color: #0B132B;
+    border-bottom: 1px solid rgba(91, 242, 252, 0.08);
+    /* 添加幾何網格紋理 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTk3OWFkMDYiIHN0cm9rZS13aWR0aD0iMC4zIj4KICAgICAgPHBhdGggZD0iTTUwIDBMTAwIDUwIDUwIDEwMCAwIDUwIDUwIDBaIi8+CiAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgPC9nPgogPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+}
+
+.contact-form-container {
+    flex: 1;
+    min-width: 300px; /* 調整最小寬度 */
+    max-width: 500px;
+    text-align: left;
+    margin-bottom: 3rem;
+    
+    background-color: #1C2541; /* 統一卡片背景色 */
+    padding: 2.8rem; /* 稍微增大內距 */
+    border-radius: 12px; /* 統一圓角 */
+    border: 1px solid rgba(91, 242, 252, 0.15);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3),
+                0 0 10px rgba(91, 242, 252, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-container:hover {
+    transform: translateY(-8px) scale(1.005); /* 輕微浮動和放大 */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4),
+                0 0 25px rgba(91, 242, 252, 0.4);
+}
+
+/* 聯絡資訊區域 - 更為簡潔，如同資訊面板 */
+.contact-methods {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: left;
+    margin-bottom: 3rem;
+    
+    background-color: #1C2541; /* 也應用卡片背景 */
+    padding: 2.8rem;
+    border-radius: 12px;
+    border: 1px solid rgba(91, 242, 252, 0.15);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3),
+                0 0 10px rgba(91, 242, 252, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-methods:hover {
+    transform: translateY(-8px) scale(1.005); /* 輕微浮動和放大 */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4),
+                0 0 25px rgba(91, 242, 252, 0.4);
+}
+
+.contact-methods h2, .contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #5bf2fc;
+}
+
+.contact-details {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.detail-item {
+    margin-bottom: 1.8rem; /* 增加間距 */
+}
+
+.detail-item h3 {
+    font-size: 1.4rem; /* 稍微增大字體 */
+    color: #E0FFFF; /* 柔和的白色 */
+    margin-bottom: 0.6rem;
+    text-shadow: none;
+    letter-spacing: 0.02em;
+}
+
+.detail-item p, .detail-item a {
+    color: #C0FFFF; /* 柔和的淺藍 */
+    text-decoration: none;
+    font-size: 1.05rem; /* 稍微增大字體 */
+    font-weight: 300;
+    text-shadow: none;
+    word-break: break-word; /* 防止長地址溢出 */
+}
+
+.detail-item a:hover {
+    color: #5bf2fc;
+    text-decoration: underline;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.8rem; /* 增大表單項目間距 */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: #A0FFFF;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 12px; /* 增加內距，更好點擊 */
+    border: 1px solid rgba(91, 242, 252, 0.3); /* 更柔和的邊框 */
+    border-radius: 6px; /* 輕微圓角 */
+    background-color: #080F20; /* 更深的背景色 */
+    font-size: 1rem;
+    color: #E6FFFF;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(230, 255, 255, 0.6); /* placeholder 顏色柔和一些 */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #5bf2fc;
+    box-shadow: 0 0 12px rgba(91, 242, 252, 0.7); /* 更強的聚焦光暈 */
+    background-color: #141c2f; /* 聚焦時稍微變亮 */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px; /* 稍微增加最小高度 */
+}
+
+.contact-form .cta-button {
+    width: auto; /* 讓按鈕根據內容自適應寬度 */
+    min-width: 200px; /* 設置最小寬度 */
+    max-width: 300px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+.form-note {
+    font-size: 0.95rem;
+    color: #A0FFFF;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* Social Media Links - 精緻的圖標呈現，疊加幾何網格紋理 */
+.social-media-links {
+    padding: 4rem 5%;
+    background-color: #080F20;
+    border-top: 1px solid rgba(91, 242, 252, 0.1);
+    /* 添加幾何網格紋理 */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBEMTMzNCIvPgogICAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTk3OWFkMDYiIHN0cm9rZS13aWR0aD0iMC4zIj4KICAgICAgPHBhdGggZD0iTTUwIDBMTAwIDUwIDUwIDEwMCAwIDUwIDUwIDBaIi8+CiAgICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjI1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9Ijc1IiByPSIwLjYiIGZpbGw9IiM2MGI2ZmMyNSIvPgogICAgPC9nPgogPC9zdmc+");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem; /* 增加間距 */
+}
+
+.social-icons img {
+    height: 45px; /* 略微增大圖標 */
+    width: 45px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(40%) opacity(0.8) drop-shadow(0 0 5px rgba(91, 242, 252, 0.3)); /* 輕微灰度，輕微透明度，輕微發光 */
+}
+
+.social-icons img:hover {
+    transform: scale(1.15) translateY(-3px); /* 放大並上浮 */
+    filter: grayscale(0%) opacity(1) drop-shadow(0 0 25px rgba(91, 242, 252, 1)); /* 完全彩色，更強的發光 */
+}
+
+
+/* RWD 響應式設計 - 優化小螢幕體驗 */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem 3%;
+    }
+    nav {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav a {
+        margin: 0 8px;
+        font-size: 0.95rem;
+    }
+    nav a::after {
+        height: 1px; /* 小螢幕下下劃線細一點 */
+        bottom: -3px;
+    }
+    .lang-switch {
+        margin-left: 0 !important;
+        margin-top: 1rem;
+        min-width: 50px; /* 小螢幕下可以稍微小一點 */
+    }
+    .hero h1 {
+        font-size: 2.8rem; /* 小螢幕標題調整 */
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    .feature-grid, .values-grid, .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    .feature-item, .value-item, .service-item, .benefit-item {
+        margin: 0 auto;
+        max-width: 400px;
+        padding: 2rem; /* 縮小內距 */
+    }
+    section {
+        padding: 4rem 3%;
+    }
+
+    .about-hero h1, .services-hero h1, .contact-hero h1 {
+        font-size: 3rem;
+    }
+    .about-hero .tagline, .services-hero .tagline, .contact-hero .tagline {
+        font-size: 1.1rem;
+    }
+    .story-content {
+        font-size: 1rem;
+    }
+    .service-item ul {
+        text-align: left;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .service-icon img {
+        width: 55px; /* 小螢幕下 icon 尺寸調整 */
+    }
+    .contact-sections-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem; /* 調整間距 */
+    }
+    .contact-form-container, .contact-methods {
+        width: 90%;
+        max-width: 500px;
+        margin: 0; /* 移除獨立 margin，交給 gap */
+        padding: 2.2rem; /* 縮小內距 */
+    }
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .social-icons img {
+        height: 40px; /* 小螢幕下社交圖標調整 */
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .cta-button {
+        padding: 0.9rem 2.2rem;
+        font-size: 0.95rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    nav a {
+        margin: 0 4px;
+        font-size: 0.85rem;
+    }
+    .about-hero h1, .services-hero h1, .contact-hero h1 {
+        font-size: 2.4rem;
+    }
+    .detail-item h3 {
+        font-size: 1.2rem;
+    }
+    .detail-item p, .detail-item a {
+        font-size: 0.95rem;
+    }
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+    }
+    .contact-form .cta-button {
+        min-width: 180px;
+    }
+}/* Custom Fonts */
+@font-face {
+    font-family: 'Gen Jyuu Gothic';
+    src: url('../public/fonts/GenJyuuGothic-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gen Jyuu Gothic';
+    src: url('../public/fonts/GenJyuuGothic-Normal.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gen Jyuu Gothic';
+    src: url('../public/fonts/GenJyuuGothic-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 /* Base64 SVG 紋理定義 - 保持不變，或調整透明度 (opacity) 如果您之前已決定 */
 /* 抽象電路板紋理 - 適用於 Hero 區塊 (約 150px x 150px) */
 .circuit-board-texture {
